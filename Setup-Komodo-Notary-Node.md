@@ -125,7 +125,7 @@ Now it is time to install Komodo. Follow each line step by step and ignore the "
 
 ```
 cd ~
-git clone https://github.com/jl777/komodo
+git clone https://github.com/KomodoPlatform/komodo
 cd komodo
 git checkout beta
 ./zcutil/fetch-params.sh
@@ -195,7 +195,7 @@ To view all commands
 Personally I prefer to have a full downloaded Bitcoin blockchain. But be sure you stop Bitcoind when you are going to install KomodoPlatform/Iguana!!
 ```
 cd ~
-git clone https://github.com/jl777/KomodoPlatform
+git clone https://github.com/KomodoPlatform/KomodoPlatform
 cd KomodoPlatform/iguana
 git checkout beta
 ./m_LP
@@ -375,7 +375,7 @@ cd ~/KomodoPlatform/iguana
 git checkout beta && git pull && ./m_notary && cd ~/komodo/src && ./dpowassets
 ```
 
-We are done! If you have given the btcpubkey to James and he has added it to the notaries.h files (located https://github.com/jl777/KomodoPlatform/blob/master/iguana/notaries.h) everything should work now.
+We are done! If you have given the btcpubkey to James and he has added it to the notaries.h files (located https://github.com/KomodoPlatform/KomodoPlatform/blob/master/iguana/notaries.h) everything should work now.
 
 
 # N00b Q&A
