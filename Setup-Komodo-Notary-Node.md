@@ -1,38 +1,55 @@
 # Komodo Notary Nodes
 
-_Please note: all of this is still in BETA phase. This readme gives you a good understanding how to build a Komodo Notary Node, but it is possible that some commands are already deprecated. If you have any problems, please join #notarynode on the Komodo-Platform Slack_
+Note: This is still in *BETA phase*. This is to give you a good understanding on building a Komodo Notary Node, but it is possible that some commands could be deprecated by the time you read it. 
+
+If you have any problems, please join #notarynode on the [Komodo Slack](https://komodo-platform.slack.com)
 
 # Requirements
+
 ## Hardware
-Komodo currently only works on Linux. To setup Komodo Notary Node be sure you have a good solid server/node with the following requirements:
 
- - A good CPU (Xeon/i7)
- - 64GB of RAM
- - 500GB SSD disk
- - 100Mbps internet connection
+Komodo currently only works on Linux. To setup Komodo Notary Node be sure you have a good solid server with the following requirements:
 
-## Software
-Ubuntu 14.04 or 16.04 minimal installation with SSH server (this tutorial is based on 14.04)
+ - CPU: A good CPU (Xeon/i7)
+ - RAM: 64GB
+ - Disk: 500GB SSD
+ - Bandwidth: 100Mbps
 
-Before you start with the whole installation process take care of the security of the server.
+### Bare minimum Hardware - only for testing this setup
+
+- CPU: Intel Core i7
+- RAM: 4GB
+- Disk: 250GB
+
+## Operating System
+
+Ubuntu x64 - *14.04* or *16.04* minimal installation with Openssh server.
+_This tutorial has been successfully tested with 14.04 and 16.04._
+
+## Security
+
+*Before doing anything further, please ensure that your server is secure.*
+
+- Update the Operating System: `apt-get -y update && apt-get -y upgrade`
+- Install [Fail2ban](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04). 
+- Create an unprivileged user and [install a SSH key](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04)
+- Please run processes as an unprivileged user and use sudo where necessary
+
 
 ## Bitcoin funded Address
-You'll also need to have the bitcoin address associated/used with notary node to be funded with some bitcoins.
-Each notary node when notarise a block is currently set to use 0.0001 BTC. So, it is best to put some BTC to it if you are participating in testnet of Komodo Notary Nodes.
+
+You'll also need to fund the bitcoin address used with notary node.
+
+Each notary node when notarise a block is currently set to use 0.0001 BTC. 
+So, it is best to put some BTC to it if you are participating in testnet of Komodo Notary Nodes.
+
 Example:
 
 `0.0001 * aprox. 144 (btc blocks per day) = aprox. 0.0144`
 
-`0.05 BTC etc. which are equals to aprox 30+ USD.`
-
-## Security Tips
-
-TIP: you don't have to change the SSH port. Follow the tutorials down under and you are set.
-
-- Install fail2ban https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
-- Create a user and install a SSH key https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
 
 # Get Started
+
 Log in as the user you made earlier (ssh user@ip_address_of_server)
 
 ```
@@ -125,7 +142,7 @@ Now it is time to install Komodo. Follow each line step by step and ignore the "
 
 ```
 cd ~
-git clone https://github.com/KomodoPlatform/komodo
+git clone https://github.com/jl777/komodo
 cd komodo
 git checkout beta
 ./zcutil/fetch-params.sh
@@ -191,24 +208,24 @@ To view all commands
 ./src/komodo-cli help
 ```
 
-## Setting up KomodoPlatform/Iguana.
-Personally I prefer to have a full downloaded Bitcoin blockchain. But be sure you stop Bitcoind when you are going to install KomodoPlatform/Iguana!!
+## Setting up SuperNET/Iguana.
+Personally I prefer to have a full downloaded Bitcoin blockchain. But be sure you stop Bitcoind when you are going to install SuperNET/Iguana!!
 ```
 cd ~
-git clone https://github.com/KomodoPlatform/KomodoPlatform
-cd KomodoPlatform/iguana
+git clone https://github.com/jl777/SuperNET
+cd SuperNET/iguana
 git checkout beta
 ./m_LP
 ```
 
-Temporary: start `~/KomodoPlatform/agents/iguana` just for setup, not for normal NN use, ie one time to get the pubkey
+Temporary: start `~/SuperNET/agents/iguana` just for setup, not for normal NN use, ie one time to get the pubkey
 ```
-~/KomodoPlatform/agents/iguana
+~/SuperNET/agents/iguana
 ```
 
 Open up a new SSH window and login to your server
 ```
-cd ~/KomodoPlatform/iguana/coins
+cd ~/SuperNET/iguana/coins
 ./basilisk.old
 ```
 
@@ -219,9 +236,9 @@ Create an iguana wallet with encryptwallet and importprivkey into both komodod a
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"bitcoinrpc\",\"method\":\"encryptwallet\",\"passphrase\":\"insert very secure password here\"}"
 ```
 
-Goto to ~/KomodoPlatform/iguana and create the executable file "wp"
+Goto to ~/SuperNET/iguana and create the executable file "wp"
 ```
-cd ~/KomodoPlatform/iguana
+cd ~/SuperNET/iguana
 vim wp
 ```
 
@@ -242,24 +259,24 @@ Run the just made file
 
 In the output of the executed file you will see a lot of data. Get the btcpubkey (not the pubkey!) and send it to Kolo. I advise you to copy the output and safe it somewhere. 
 
-Create a text file `~/KomodoPlatform/iguana/userhome.txt` with just this path in it
+Create a text file `~/SuperNET/iguana/userhome.txt` with just this path in it
 ```
-vim ~/KomodoPlatform/iguana/userhome.txt
+vim ~/SuperNET/iguana/userhome.txt
 # and put your home folder in it. Mostly it is home/username (without the front and back slash!)
 ```
 
 Copy these files then change them from using port 7778 to 7776
 ```
-cp ~/KomodoPlatform/iguana/coins/btc ~/KomodoPlatform/iguana/
-cp ~/KomodoPlatform/iguana/coins/kmd ~/KomodoPlatform/iguana/
-cp ~/KomodoPlatform/iguana/wp ~/KomodoPlatform/iguana/wp_7776
+cp ~/SuperNET/iguana/coins/btc ~/SuperNET/iguana/
+cp ~/SuperNET/iguana/coins/kmd ~/SuperNET/iguana/
+cp ~/SuperNET/iguana/wp ~/SuperNET/iguana/wp_7776
 ```
 
 Now create a new file for the pubkey. Enter it as:
 pubkey=xxxxxxxxxxxxxxxxxxxxxxx
 ```
 vim pubkey.txt
-cp ~/KomodoPlatform/iguana/pubkey.txt ~/komodo/src/pubkey.txt
+cp ~/SuperNET/iguana/pubkey.txt ~/komodo/src/pubkey.txt
 ```
 
 We have installed all the things we needed, but we have some configurations to do. Komodo is now mining with his own komodo pubkey, but we have to integrate some stuff into komodo. Let's hope you have copied and pasted the part where you got your btcpubkey etc. somewhere. Bring it back up.
@@ -371,11 +388,11 @@ When the server is rebooted and you are logged in as user (and lands into your h
 CTRL-C
 cd komodo/src
 ./assetchains (and wait 15 minutes before you go to the next step)
-cd ~/KomodoPlatform/iguana
+cd ~/SuperNET/iguana
 git checkout beta && git pull && ./m_notary && cd ~/komodo/src && ./dpowassets
 ```
 
-We are done! If you have given the btcpubkey to James and he has added it to the notaries.h files (located https://github.com/KomodoPlatform/KomodoPlatform/blob/master/iguana/notaries.h) everything should work now.
+We are done! If you have given the btcpubkey to James and he has added it to the notaries.h files (located https://github.com/jl777/SuperNET/blob/master/iguana/notaries.h) everything should work now.
 
 
 # N00b Q&A
@@ -396,4 +413,4 @@ We are done! If you have given the btcpubkey to James and he has added it to the
         Rule nr.1, if you do not see any ERROR's, let it run. James is busy with debugging the code. Do you see warnings, then let it run. If you don't trust it, restart it again.
 
 - My Iguana process gets killed by a buffer overflow error. Do i have to start over again?
-        No, just go to ~/Supernet and do a git pull. 
+        No, just go to ~/SuperNET and do a git pull. 
