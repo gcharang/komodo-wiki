@@ -15,12 +15,6 @@ Komodo currently only works on Linux. To setup Komodo Notary Node be sure you ha
  - Disk: 500GB SSD
  - Bandwidth: 100Mbps
 
-### Bare minimum Hardware - only for testing this setup
-
-- CPU: Intel Core i7
-- RAM: 4GB
-- Disk: 250GB
-
 ## Operating System
 
 Ubuntu x64 - *14.04* or *16.04* minimal installation with Openssh server.
