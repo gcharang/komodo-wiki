@@ -1,6 +1,6 @@
 #### To create and start generating/mining with new Assetchain
 ```shell
-./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -gen
+./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -gen &
 ```
 
 The above will start a new assetchain with name "EXAMPLECHAIN" and start generating blocks every 60 seconds.
