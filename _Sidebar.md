@@ -22,7 +22,7 @@
 
 [Setup Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Setup-Komodo-Notary-Node)
 
-[Notary Node security](https://github.com/SuperNETorg/komodo/wiki/Standard-Security-Setup-for-Nodes)
+[Notary Node security](https://github.com/KomodoPlatform/komodo/wiki/Standard-Security-Setup-for-Nodes)
 
 [Updating Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Updating-notary-node-in-few-lessons)
 
