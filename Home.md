@@ -34,7 +34,9 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 
 [Komodo Whitepaper](https://www.komodoplatform.com/en/whitepaper/2018-02-14-Komodo-White-Paper-Full.pdf)
 
-[Delayed Proof of Work (dPOW) Whitepaper](https://github.com/KomodoPlatform/komodo/wiki/Delayed-Proof-of-Work-(dPoW)-Whitepaper)
+[dPOW Whitepaper](https://github.com/KomodoPlatform/komodo/wiki/Delayed-Proof-of-Work-(dPoW)-Whitepaper)
+
+[dICO Whitepaper](https://github.com/KomodoPlatform/KomodoPlatform/wiki/dICO-Whitepaper)
 
 [JUMBLR Whitepaper](https://github.com/KomodoPlatform/komodo/wiki/JUMBLR-Whitepaper)
 
