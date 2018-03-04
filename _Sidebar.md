@@ -42,8 +42,6 @@
 
 [Using Key/Value](https://github.com/KomodoPlatform/komodo/wiki/Using-Key-Value)
 
-[BarterDEX CLI guide](https://github.com/KomodoPlatform/komodo/wiki/BarterDEX-API-Summary-by-Category)
-
 [0conf Swaps](https://github.com/KomodoPlatform/KomodoPlatform/wiki/Processing-InstantDEX-swap-on-barterDEX)
 
 **Testers**
