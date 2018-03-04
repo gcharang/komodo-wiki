@@ -16,7 +16,7 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 
 [Using JUMBLR](https://github.com/KomodoPlatform/komodo/wiki/Using-JUMBLR)
 
-**Komodo Notary Node**
+#### Komodo Notary Node
 
 [Setup Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Setup-Komodo-Notary-Node)
 
