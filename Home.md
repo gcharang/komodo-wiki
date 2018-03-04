@@ -14,4 +14,12 @@ https://github.com/KomodoPlatform/komodo/wiki/Creating-New-Assetchain
 
 **Notary Node**
 
+https://github.com/KomodoPlatform/komodo/wiki/Setup-Komodo-Notary-Node
+
+https://github.com/KomodoPlatform/komodo/wiki/Standard-Security-Setup-for-Nodes
+
+https://github.com/KomodoPlatform/komodo/wiki/Updating-notary-node-in-few-lessons
+
+https://github.com/KomodoPlatform/komodo/wiki/Monitor-your-Komodo-Notary-Node
+
 https://github.com/KomodoPlatform/komodo/wiki/Assetchains-Guide-for-Notary-Nodes
