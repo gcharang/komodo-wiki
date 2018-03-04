@@ -1,6 +1,6 @@
 Welcome to the komodo wiki! This is where you find more information about Komodo (KMD)
 
-**Komodo**
+#### Komodo
 
 [Install Komodo Manually](https://github.com/KomodoPlatform/komodo/wiki/Installing-Komodo-Manually)
 
@@ -30,7 +30,7 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 
 [Useful KNN Commands](https://github.com/KomodoPlatform/komodo/wiki/Useful-commands-KNN)
 
-**Whitepaper**
+#### Whitepaper
 
 [Komodo Whitepaper](https://www.komodoplatform.com/en/whitepaper/2018-02-14-Komodo-White-Paper-Full.pdf)
 
