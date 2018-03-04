@@ -22,11 +22,11 @@ Search for a specific pubkey in files (like: notaries.c, ratify(A,B,C)_7776 etc.
 
 ```
 **notaries.c**
-cd ~/KomodoPlatform/iguana
+cd ~/SuperNET/iguana
 cat notaries.c | grep 0209d48554768dd8dada988b98aca23405057ac4b5b46838a9378b95c3e79b9b9e (or any pubkey of course)
 
 **ratify(A,B,C)_7776**
-cd ~/KomodoPlatform/iguana/tests
+cd ~/SuperNET/iguana/tests
 cat ratifyA_7776 | grep 0209d48554768dd8dada988b98aca23405057ac4b5b46838a9378b95c3e79b9b9e (or any pubkey of course)
 ```
 
