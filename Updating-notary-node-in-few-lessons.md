@@ -81,7 +81,7 @@ Now you can fasten your belt and finally start komodo.
 # Lesson 4: Starting komodo instance
 
     cd ~/komodo/src
-    ./komodod -notary -gen -genproclimit=4 \
+    ./komodod -notary -gen -genproclimit=2 \
     -pubkey=0287aa4b73988ba26cf6565d815786caf0d2c4af704d7883d163ee89cd9977edec \
     -pax -rewind=110000
 
