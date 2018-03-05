@@ -78,7 +78,7 @@ Last two lines allow you to keep komodo daemon hidden from outter world. It will
 
 Now you can fasten your belt and finally start komodo.
 
-# Lesson 4: Starting komod instance
+# Lesson 4: Starting komodo instance
 
     cd ~/komodo/src
     ./komodod -notary -gen -genproclimit=4 \
