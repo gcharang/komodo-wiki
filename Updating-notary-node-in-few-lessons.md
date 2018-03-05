@@ -87,7 +87,7 @@ Now you can fasten your belt and finally start komodo.
 
 # Lesson 5: Starting iguana
 
-    cd ~/KomodoPlatform/iguana
+    cd ~/SuperNET/iguana
     cat ./wp_7776     # <-- post this to slack
     ./m_notary
 
