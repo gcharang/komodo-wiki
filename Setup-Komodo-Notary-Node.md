@@ -300,7 +300,7 @@ bitcoin-cli validateaddress yourbtcaddress
 
 if `ismine: true` it has been successfully imported
 
-#### Import privateky into assetchains
+### Import privateky into assetchains
 Import your KMD/BTCD WIF into all assetchains
 
 ```shell
