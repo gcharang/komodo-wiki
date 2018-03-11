@@ -300,6 +300,16 @@ bitcoin-cli validateaddress yourbtcaddress
 
 if `ismine: true` it has been successfully imported
 
+#### Import privateky into assetchains
+Import your KMD/BTCD WIF into all assetchains
+
+```shell
+cd ~
+cd komodo/src
+./fiat-cli importprivkey U####################################
+```
+This will trigger blockchain rescan and may take a very long time. Wait for the process to be finished.
+
 Now we need to chain everything together. Pondsea came up with a nice handy little script. So let's start
 
 Create a script file at `/home/username/` and name it start
