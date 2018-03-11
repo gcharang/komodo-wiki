@@ -24,7 +24,7 @@ _This tutorial has been successfully tested with 14.04 and 16.04._
 
 *Before doing anything further, please ensure that your server is secure.*
 
-- Update the Operating System: `apt-get -y update && apt-get -y upgrade`
+- Update the Operating System: `sudo apt-get -y update && sudo apt-get -y upgrade`
 - Install [Fail2ban](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04). 
 - Create an unprivileged user and [install a SSH key](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04)
 - Please run processes as an unprivileged user and use sudo where necessary
@@ -210,7 +210,7 @@ cd ~/SuperNET/iguana/coins
 ./basilisk.old
 ```
 
-if you receive this error: "ERROR BINDING PORT.8332 this is normal tcp timeout, unless another process is using port" then you were already running Bitcoind in the background. Stop Iguana and Bitcoind and start the above again.
+if you receive this error: `"ERROR BINDING PORT.8332` this is normal tcp timeout, unless another process is using port" then you were already running Bitcoind in the background. Stop Iguana and Bitcoind and start the above again.
 
 Create an iguana wallet with encryptwallet and importprivkey into both komodod and bitcoind using the KMDwif and BTCwif in the encryptwallet result once you have them installed and running. Put in a really good password and be sure you keep the slash at the end.
 ```shell
