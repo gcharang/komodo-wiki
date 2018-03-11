@@ -46,13 +46,13 @@ Example:
 
 Log in as the user you made earlier (ssh user@ip_address_of_server)
 
-```
+```shell
 sudo apt-get update
 sudo apt-get upgrade (and say Y when it wants to upgrade stuff)
 ```
 
 The following packages are needed:
-```
+```shell
 sudo apt-get install build-essential pkg-config libc6-dev m4 \
 		g++-multilib autoconf libtool ncurses-dev unzip git python \
 		zlib1g-dev wget bsdmainutils automake libboost-all-dev \
@@ -78,14 +78,14 @@ sudo ldconfig
 
 Let us first install Bitcoind, because it takes some time to sync it all up (around 12 hours)
 
-```
+```shell
 sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install bitcoind bitcoin-qt
 ```
 
 Let's create folder .bitcoin
-```
+```shell
 cd ~/
 mkdir .bitcoin
 cd .bitcoin
@@ -93,7 +93,7 @@ vim bitcoin.conf
 ```
 
 Paste this in your bitcoin.conf (replace recuser and rpcpassword)
-```
+```shell
 server=1
 daemon=1
 txindex=1
@@ -104,17 +104,17 @@ rpcbind=127.0.0.1
 ```
 
 secure the bitcoin.conf file
-```
+```shell
 chmod 600 ~/.bitcoin/bitcoin.conf
 ```
 
 Start Bitcoind
-```
+```shell
 bitcoind &
 ```
 
 check to see if it's downloading the blocks
-```
+```shell
 bitcoin-cli getinfo
 ```
 
@@ -123,7 +123,7 @@ Now it is time to install Komodo. Follow each line step by step and ignore the "
 
 ## Installing Komodo
 
-```
+```shell
 cd ~
 git clone https://github.com/jl777/komodo
 cd komodo
@@ -132,14 +132,14 @@ git checkout beta
 ```
 
 -j8 uses 8 threads - replace 8 with number of threads you want to use or nproc variable
-```
+```shell
 ./zcutil/build.sh -j$(nproc)
 ```
 This can take some time.
 
 
 ## When it is finished, let's create komodo.conf
-```
+```shell
 cd ~
 mkdir .komodo
 cd .komodo
@@ -147,7 +147,7 @@ vim komodo.conf
 ```
 
 Add the following lines to the komodo.conf file (replace rpcuser and rpcpassword)
-```
+```shell
 rpcuser=bitcoinrpc
 rpcpassword=password
 txindex=1
@@ -156,13 +156,13 @@ rpcbind=127.0.0.1
 ```
 
 Now let's start the mining process. Use CTRL-C to get out when you miss your cursor
-```
+```shell
 cd ~
 cd komodo
 ```
 
 To start the daemon to import btcdwif later on this setup
-```
+```shell
 ./src/komodod -gen -genproclimit=2 &
 ```
 
@@ -172,28 +172,28 @@ To start the daemon to import btcdwif later on this setup
 Here are some additional commands which will be handy in the future
 
 This will get the stats:
-```
+```shell
 ./src/komodo-cli getinfo
 ```
 
 To stop the daemon:
-```
+```shell
 ./src/komodo-cli stop 
 ```
 
 To view komodod output (very handy):
-```
+```shell
 tail -f ~/.komodo/debug.log
 ```
 
 To view all commands
-```
+```shell
 ./src/komodo-cli help
 ```
 
 ## Setting up SuperNET/Iguana.
 Personally I prefer to have a full downloaded Bitcoin blockchain. But be sure you stop Bitcoind when you are going to install SuperNET/Iguana!!
-```
+```shell
 cd ~
 git clone https://github.com/jl777/SuperNET
 cd SuperNET/iguana
@@ -202,12 +202,12 @@ git checkout beta
 ```
 
 Temporary: start `~/SuperNET/agents/iguana` just for setup, not for normal NN use, ie one time to get the pubkey
-```
+```shell
 ~/SuperNET/agents/iguana
 ```
 
 Open up a new SSH window and login to your server
-```
+```shell
 cd ~/SuperNET/iguana/coins
 ./basilisk.old
 ```
@@ -215,23 +215,23 @@ cd ~/SuperNET/iguana/coins
 if you receive this error: "ERROR BINDING PORT.8332 this is normal tcp timeout, unless another process is using port" then you were already running Bitcoind in the background. Stop Iguana and Bitcoind and start the above again.
 
 Create an iguana wallet with encryptwallet and importprivkey into both komodod and bitcoind using the KMDwif and BTCwif in the encryptwallet result once you have them installed and running. Put in a really good password and be sure you keep the slash at the end.
-```
+```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"bitcoinrpc\",\"method\":\"encryptwallet\",\"passphrase\":\"insert very secure password here\"}"
 ```
 
 Goto to ~/SuperNET/iguana and create the executable file "wp"
-```
+```shell
 cd ~/SuperNET/iguana
 vim wp
 ```
 
 Paste this into your wp file and be sure you set the password that you have made above (watch out for the slash at the end)
-```
+```shell
 curl --url "http://127.0.0.1:7778" --data "{\"method\":\"walletpassphrase\",\"params\":[\"same passphrase as above\", 9999999]}"
 ```
 
 Make it executable
-```
+```shell
 chmod +x wp
 ```
 
@@ -244,13 +244,13 @@ Run the just made file
 In the output of the executed file you will see a lot of data. Get the btcpubkey (not the pubkey!) and send it to Kolo. I advise you to copy the output and safe it somewhere. 
 
 Create a text file `~/SuperNET/iguana/userhome.txt` with just this path in it
-```
+```shell
 vim ~/SuperNET/iguana/userhome.txt
 # and put your home folder in it. Mostly it is home/username (without the front and back slash!)
 ```
 
 Copy these files then change them from using port 7778 to 7776
-```
+```shell
 cp ~/SuperNET/iguana/coins/btc ~/SuperNET/iguana/
 cp ~/SuperNET/iguana/coins/kmd ~/SuperNET/iguana/
 cp ~/SuperNET/iguana/wp ~/SuperNET/iguana/wp_7776
@@ -258,7 +258,7 @@ cp ~/SuperNET/iguana/wp ~/SuperNET/iguana/wp_7776
 
 Now create a new file for the btcpubkey. Enter it as:
 pubkey=xxxxxxxxxxxxxxxxxxxxxxx
-```
+```shell
 vim pubkey.txt
 cp ~/SuperNET/iguana/pubkey.txt ~/komodo/src/pubkey.txt
 ```
@@ -267,7 +267,7 @@ We have installed all the things we needed, but we have some configurations to d
 
 ## Final Steps
 While komodo is still mining we can send commands to it. We need to import the privkey of your BTCD address into Komodo. Find your BTCDwif key (do NOT mistake it with your BTCwif). Now let's import it.
-```
+```shell
 cd ~
 cd komodo
 ./src/komodo-cli importprivkey BTCDwif
@@ -275,7 +275,7 @@ cd komodo
 ```
 
 To check to see if it imported successfully run
-```
+```shell
 ./src/komodo-cli validateaddress btcdaddress
 # replace btcdaddress with the address you received earlier (like: RVxtoUT0CXbC1LrtltNAf9yR5yWnFnSPQh)
 ```
@@ -287,13 +287,13 @@ We have successfully imported the BTCD address into Komodo.
 Now we have to integrate your BTC privkey into your Bitcoin installation. Be sure Bitcoind is running at this point!
 
 Import BTC Priv Key (BTCwif)
-```
+```shell
 bitcoin-cli importprivkey BTCwif &
 # replace BTCwif with the key you received earlier (like: L3Qm5bB3frS2rdMNtmZrEMReRvYKMReALwxMaf00oz9YahvZaB4a)
 ```
 
 Run the following to confirm it has imported properly.
-```
+```shell
 bitcoin-cli validateaddress yourbtcaddress 
 # replace yourbtcaddress with the address you received earlier (like: 1MghixZrbhncwLGTIiP3ZdeDKhzBaPUKKu)
 ```
@@ -315,19 +315,19 @@ This will trigger blockchain rescan and may take a very long time. Wait for the 
 Now we need to chain everything together. Pondsea came up with a nice handy little script. So let's start
 
 Create a script file at `/home/username/` and name it start
-```
+```shell
 vim start
 ```
 
 Paste into file and replace the pubkey with your **btcpubkey** and save it.
-```
+```shell
 bitcoind &
 cd komodo
 ./src/komodod -gen -genproclimit=2 -notary -pubkey="0225aa6f6f19e543180b31153d9e6d55d41bc7ec2ba191fd29f19a2f973544e29d" &
 ```
 
 Make it executable
-```
+```shell
 chmod +x start
 ```
 
@@ -337,7 +337,7 @@ This should bind all the tech stuff together, but not after we make some tweakin
 By default the number of open files pro user in Ubuntu is 1024. In our case this number is too small so you have to increase it.
 
 This is done with the ulimit command:
-```
+```shell
 $ulimit -a   # see all the kernel parameters
 $ulimit -n   #see the number of open files
 $ulimit -n 1000000  #  set the number open files to 1000000
@@ -347,12 +347,12 @@ The problem with this way is that the ulimit parameter is only set currently for
 This means that after a reboot you’ll need to set the parameter again. Do following to set it permanent:
 
 edit /etc/security/limits.conf
-```
+```shell
 sudo vim /etc/security/limits.conf
 ```
 
 add these lines:
-```
+```shell
 * soft nofile 1000000
 * hard nofile 1000000
 ```
@@ -360,26 +360,26 @@ add these lines:
 save and close file
 
 edit /etc/pam.d/common-session 
-```
+```shell
 sudo vim /etc/pam.d/common-session
 ```
 
 add this line:
-```
+```shell
 session required pam_limits.so
 ```
 
 save and close file
 
 reboot & check:
-```
+```shell
 ulimit -n
 ```
 
 We are done. Now let's reboot the server and chain everything together with the start script and m_notary
 
 When the server is rebooted and you are logged in as user (and lands into your home dir)
-```
+```shell
 ./start
 CTRL-C
 cd komodo/src
