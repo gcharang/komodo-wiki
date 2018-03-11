@@ -61,26 +61,14 @@ sudo apt-get install build-essential pkg-config libc6-dev m4 \
 		curl libcurl4-gnutls-dev cmake clang
 ```
 
-Something else needs to be done. Libnanomsg needs to be installed. For Ubuntu 14.04 you need to install it yourself. 
+Something else needs to be done. Libnanomsg needs to be installed.
 
-```
-cd /tmp
-wget https://github.com/nanomsg/nanomsg/archive/1.0.0.tar.gz -O nanomsg-1.0.0.tar.gz
-tar -xzvf nanomsg-1.0.0.tar.gz
-cd nanomsg-1.0.0
-mkdir build
-cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-cmake --build .
-sudo cmake --build . --target install
-sudo ldconfig
-```
-Or the following for 16.04
-```
+```shell
+cd ~
 git clone https://github.com/nanomsg/nanomsg
 cd nanomsg
-cmake .
-make
+cmake . -DNN_TESTS=OFF -DNN_ENABLE_DOC=OFF
+make -j2
 sudo make install
 sudo ldconfig
 ```
@@ -247,8 +235,9 @@ chmod +x wp
 ```
 
 Run the just made file
-```
+```shell
 ./wp
+{"pubkey":"7fa4cbfb3c33981b3015c6d08895fe5769ead9cbfae4b89afab681ab0db15f43","RS":"NXT-KL8J-EFN2-2BXJ-BUUTB","NXT":"10729644020227164368","btcpubkey":"03a47c429b6fd83dc9687ba409ee6f34823094b97bad4c0f4f60649c55bbdf497b","rmd160":"58e7000f7d6e4d48e6bf46b1cdb2ad5842232411","BTCD":"RHPGGaJML2Ts7TLz6WasK3xSX3XKuKsHeD","BTC":"1975C4R4jCfJ3SyndLbkDXdEkn4jJibuqK","result":"success","handle":"","persistent":"7fa4cbfb3c33981b3015c6d08895fe5769ead9cbfae4b89afab681ab0db15f43","status":"unlocked","duration":3600,"tag":"14543391360640231809"}
 ```
 
 In the output of the executed file you will see a lot of data. Get the btcpubkey (not the pubkey!) and send it to Kolo. I advise you to copy the output and safe it somewhere. 
@@ -266,7 +255,7 @@ cp ~/SuperNET/iguana/coins/kmd ~/SuperNET/iguana/
 cp ~/SuperNET/iguana/wp ~/SuperNET/iguana/wp_7776
 ```
 
-Now create a new file for the pubkey. Enter it as:
+Now create a new file for the btcpubkey. Enter it as:
 pubkey=xxxxxxxxxxxxxxxxxxxxxxx
 ```
 vim pubkey.txt
