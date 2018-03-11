@@ -24,29 +24,15 @@ sudo apt-get upgrade (and say Y when it wants to upgrade stuff)
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang
 ```
 
-Some Linux machines are now providing *nanomsg* package version 1.0. If it is available via package manager, you can install it from there. Else, you should use github repo of nanomsg and compile it yourself.
+### Install `nanomsg`
 
-#### For Ubuntu 14.04 you need to install it yourself
+#### Linux
 ```shell
-cd /tmp
-wget https://github.com/nanomsg/nanomsg/archive/1.0.0.tar.gz -O nanomsg-1.0.0.tar.gz
-tar -xzvf nanomsg-1.0.0.tar.gz
-cd nanomsg-1.0.0
-mkdir build
-cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-cmake --build .
-sudo cmake --build . --target install
-sudo ldconfig
-```
-
-
-#### Or the following for 16.04
-```shell
+cd ~
 git clone https://github.com/nanomsg/nanomsg
 cd nanomsg
-cmake .
-make
+cmake . -DNN_TESTS=OFF -DNN_ENABLE_DOC=OFF
+make -j2
 sudo make install
 sudo ldconfig
 ```
