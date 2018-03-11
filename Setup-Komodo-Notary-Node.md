@@ -147,7 +147,7 @@ vim komodo.conf
 ```
 
 Add the following lines to the komodo.conf file (replace rpcuser and rpcpassword)
-```shell
+```JSON
 rpcuser=bitcoinrpc
 rpcpassword=password
 txindex=1
@@ -165,8 +165,6 @@ To start the daemon to import btcdwif later on this setup
 ```shell
 ./src/komodod -gen -genproclimit=2 &
 ```
-
-
 
 ### Komodo is mining right now.
 Here are some additional commands which will be handy in the future
@@ -235,13 +233,16 @@ Make it executable
 chmod +x wp
 ```
 
-Run the just made file
+Run the `wp` script file
 ```shell
 ./wp
+```
+Output example below
+```JSON
 {"pubkey":"7fa4cbfb3c33981b3015c6d08895fe5769ead9cbfae4b89afab681ab0db15f43","RS":"NXT-KL8J-EFN2-2BXJ-BUUTB","NXT":"10729644020227164368","btcpubkey":"03a47c429b6fd83dc9687ba409ee6f34823094b97bad4c0f4f60649c55bbdf497b","rmd160":"58e7000f7d6e4d48e6bf46b1cdb2ad5842232411","BTCD":"RHPGGaJML2Ts7TLz6WasK3xSX3XKuKsHeD","BTC":"1975C4R4jCfJ3SyndLbkDXdEkn4jJibuqK","result":"success","handle":"","persistent":"7fa4cbfb3c33981b3015c6d08895fe5769ead9cbfae4b89afab681ab0db15f43","status":"unlocked","duration":3600,"tag":"14543391360640231809"}
 ```
 
-In the output of the executed file you will see a lot of data. Get the btcpubkey (not the pubkey!) and send it to Kolo. I advise you to copy the output and safe it somewhere. 
+In the output of the executed file you will see a lot of data. Get the btcpubkey (not the pubkey!) (`03a47c429b6fd83dc9687ba409ee6f34823094b97bad4c0f4f60649c55bbdf497b`) and send it to Kolo. It is strongly recommended to write the above info somewhere and save it. 
 
 Create a text file `~/SuperNET/iguana/userhome.txt` with just this path in it
 ```shell
