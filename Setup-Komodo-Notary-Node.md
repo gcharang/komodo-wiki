@@ -93,7 +93,7 @@ vim bitcoin.conf
 ```
 
 Paste this in your bitcoin.conf (replace recuser and rpcpassword)
-```shell
+```JSON
 server=1
 daemon=1
 txindex=1
