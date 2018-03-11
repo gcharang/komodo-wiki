@@ -61,6 +61,7 @@ sudo apt-get install build-essential pkg-config libc6-dev m4 \
 		curl libcurl4-gnutls-dev cmake clang
 ```
 
+## Install `nanomsg`
 Something else needs to be done. Libnanomsg needs to be installed.
 
 ```shell
