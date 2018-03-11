@@ -306,8 +306,10 @@ Import your KMD/BTCD WIF into all assetchains
 ```shell
 cd ~
 cd komodo/src
-./fiat-cli importprivkey UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa
+./fiat-cli importprivkey U####################################
 ```
+# replace U####################################  with the key (BTCDwif) you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
+
 This will trigger blockchain rescan and may take a very long time. Wait for the process to be finished.
 
 Now we need to chain everything together. Pondsea came up with a nice handy little script. So let's start
