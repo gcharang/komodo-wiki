@@ -31,9 +31,3 @@ However, if you are aware of “dollar cost averaging” you will realize that t
 The smartaddress method of trading turns the slower pace of trading into an advantage. Instead of being stuck with whatever the seemingly random market price was the moment you thought to submit a trade, smartaddress trading will get you the cost averaged price as it will incrementally complete the trades over time. 
 
 This also means that you don’t have to spend hours nervously watching the ticker and confusing charts. Smartaddresses are designed for the longer term investor instead of for the day trader.
-
-#### Q. How long will it take to finish the DEX trades?
-A. Each DEX trade should finish in a couple of coin confirmations, and for small amounts or trusted LP nodes, it can even complete within a minute. But that is for a single trade. If a large amount is sent to a smartaddress, it is broken up into standard sizes and traded one at a time. 10000 KMD is the largest increment, so if you send in more than 10000 KMD worth of coins, it will do increments of 10000 KMD at a time until there is less. Then it does the 1000 KMD increments in the same way. Finally, it does things in 100 KMD increments.
-
-#### Q. Can I DEX less than 100 KMD worth?
-A. No, since a native DEX is issuing multiple (permanent) blockchain transactions, it really isn’t a good thing to do very small trades. That will lead to blockchain bloat and really, if you aren’t even trading 100 KMD (~$25 at current market prices), then it does not seem like any urgent thing to achieve. $25 is within the reach of most people and one millionth the coin supply was arbitrarily set as the minimum DEX increment. Also, consider that if you are trading in lots of $1, then why not just use a central exchange? It won’t be any large disaster regardless of what happens to it.
