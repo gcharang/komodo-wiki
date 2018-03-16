@@ -110,12 +110,12 @@ chmod 600 ~/.bitcoin/bitcoin.conf
 
 Start Bitcoind
 ```shell
-bitcoind &
+bitcoind -daemon
 ```
 
 check to see if it's downloading the blocks
 ```shell
-bitcoin-cli getinfo
+bitcoin-cli getblockchaininfo
 ```
 
 This takes some time depending your internet connection. Let it run in the background.
