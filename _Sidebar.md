@@ -26,6 +26,8 @@
 
 [Updating Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Updating-notary-node-in-few-lessons)
 
+[NN Assetchains Guide](https://github.com/KomodoPlatform/komodo/wiki/Assetchains-Guide-for-Notary-Nodes)
+
 [Monitor Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Monitor-your-Komodo-Notary-Node)
 
 **Developers**
