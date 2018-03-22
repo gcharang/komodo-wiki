@@ -3,9 +3,11 @@
 ./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -gen &
 ```
 
-The above will start a new assetchain with name "EXAMPLECHAIN" and start generating blocks every 60 seconds.
+The above will start a new assetchain with name "EXAMPLECHAIN" and start generating on-demand blocks every 60 seconds.
 The first node which spawned a new assetchain will mine first 100 blocks.
 And that same first node will also hold the supply of this assetchains' token 1000000.
+
+500 milliom max is good to use, to avoid 64 bit overflows.
 
 #### Querying Assetchain
 You can query for assetchain blocks and balances with this komodo CLI command:
