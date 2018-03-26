@@ -189,7 +189,9 @@ Now install the dependency packages:
 ```shell
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
-brew tap homebrew/versions; brew install homebrew/versions/gcc5
+brew install gcc
+brew install cmake
+brew install leveldb
 brew install binutils
 brew install protobuf
 brew install coreutils
