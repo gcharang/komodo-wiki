@@ -211,6 +211,7 @@ cd komodo
 
 #### And now build Komodo
 ```shell
+git checkout beta
 ./zcutil/build-mac.sh
 ```
 This can take some time, so let's create a configuration file in the mean time. 
