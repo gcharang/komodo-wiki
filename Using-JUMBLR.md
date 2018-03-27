@@ -8,7 +8,7 @@ Which of the three stages is done is randomly selected at each turn. Also when t
 
 `jumblr_deposit` designates the deposit address as the jumblr deposit address for that session. You can select an address that already has funds in it and it will immediately start jumblr process. If there are no funds, it will wait until you send funds to it.
 
-There are three sizes of a jumblr transaction: 10 KMD, 100 KMD and 1000 KMD. There is also a fixed interval of blocks where all jumblr nodes are active. Currently, it is set to be 10, but this is subject to change. Only during every 1010 blocks are the largest 1000 KMD transactions processed, so this concentrates all the large transactions every NN blocks.
+There are three sizes of a jumblr transaction: 10.1 KMD, 101 KMD, 7777 KMD. There is also a fixed interval of blocks where all JUMBLR nodes are active. Currently, it is set to be 10, but this is subject to change. Only during every 1010 blocks are the largest 7777 KMD transactions processed, so this concentrates all the large transactions every NN blocks.
 
 `jumblr_secret` notifies JUMBLR where to send the final `z -> t` transactions. In order to allow larger accounts to obtain privacy, up to 777 secret addresses are supported. Whenever a `z -> t` stage is activated, a random secret address from the list of the then active secret addresses is selected.
 
