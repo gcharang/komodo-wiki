@@ -314,7 +314,7 @@ cd komodo/src
 
 This will trigger blockchain rescan and may take a very long time. Wait for the process to be finished.
 
-# Install Chips:
+## Install Chips:
 ```shell
 cd ~
 git clone https://github.com/jl777/chips3.git
