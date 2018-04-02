@@ -314,6 +314,74 @@ cd komodo/src
 
 This will trigger blockchain rescan and may take a very long time. Wait for the process to be finished.
 
+# Install Chips:
+```shell
+cd ~
+git clone https://github.com/jl777/chips3.git
+cd chips3/
+```
+> Build Berkly DB 4.8
+```shell
+CHIPS_ROOT=$(pwd)
+BDB_PREFIX="${CHIPS_ROOT}/db4"
+mkdir -p $BDB_PREFIX
+wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
+echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef db-4.8.30.NC.tar.gz' | sha256sum -c
+tar -xzvf db-4.8.30.NC.tar.gz
+cd db-4.8.30.NC/build_unix/
+../dist/configure -enable-cxx -disable-shared -with-pic -prefix=$BDB_PREFIX
+make -j$(nproc)
+make install 
+```
+
+> Build Chips
+```shell
+cd ~/chips3
+./autogen.sh
+./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc
+make -j$(nproc)
+```
+
+> Create chips.conf file with random username, password, txindex and daemon turned on:
+```shell
+cd ~
+mkdir .chips
+nano .chips/chips.conf
+```
+
+> Add the following lines into your `chips.conf` file
+
+```
+rpcuser=metaphilibert
+rpcpassword=WirelessCoinForever
+txindex=1
+server=1
+daemon=1
+```
+
+> Symlinking the binaries
+```shell
+sudo ln -sf /home/$USER/chips3/src/chips-cli /usr/local/bin/chips-cli
+sudo ln -sf /home/$USER/chips3/src/chipsd /usr/local/bin/chipsd
+sudo chmod +x /usr/local/bin/chips-cli
+sudo chmod +x /usr/local/bin/chipsd
+```
+> Run!
+```shell
+chipsd
+```
+
+> Check
+```shell
+chips-cli getinfo
+```
+
+> Import privkey 
+```shell
+chips-cli importprivkey BTCDwif
+# replace BTCDwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
+```
+
 Now we need to chain everything together. Pondsea came up with a nice handy little script. So let's start
 
 Create a script file at `/home/username/` and name it start
