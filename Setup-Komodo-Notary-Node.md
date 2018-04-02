@@ -321,7 +321,7 @@ cd ~
 git clone https://github.com/jl777/chips3.git
 cd chips3/
 ```
-> Build Berkly DB 4.8
+> Build Berkeley DB 4.8
 ```shell
 CHIPS_ROOT=$(pwd)
 BDB_PREFIX="${CHIPS_ROOT}/db4"
