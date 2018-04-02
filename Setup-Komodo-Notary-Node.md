@@ -307,6 +307,7 @@ Import your KMD/BTCD WIF into all assetchains
 ```shell
 cd ~
 cd komodo/src
+./assetchains (wait for the blockchain to fully, will take a long time)
 ./fiat-cli importprivkey BTCDwif
 # replace BTCDwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
 ```
