@@ -393,6 +393,7 @@ vim start
 Paste into file and replace the pubkey with your **btcpubkey** and save it.
 ```shell
 bitcoind &
+chipsd &
 cd komodo
 ./src/komodod -gen -genproclimit=2 -notary -pubkey="0225aa6f6f19e543180b31153d9e6d55d41bc7ec2ba191fd29f19a2f973544e29d" &
 ```
@@ -452,8 +453,6 @@ We are done. Now let's reboot the server and chain everything together with the 
 When the server is rebooted and you are logged in as user (and lands into your home dir)
 ```shell
 ./start
-CTRL-C
-chipsd &
 CTRL-C
 cd komodo/src
 ./assetchains
