@@ -163,7 +163,7 @@ cd komodo
 
 To start the daemon to import btcdwif later on this setup
 ```shell
-./src/komodod -gen -genproclimit=2 &
+./src/komodod &
 ```
 
 ### Komodo is mining right now.
