@@ -453,8 +453,11 @@ When the server is rebooted and you are logged in as user (and lands into your h
 ```shell
 ./start
 CTRL-C
+chipsd &
+CTRL-C
 cd komodo/src
-./assetchains (and wait 15 minutes before you go to the next step)
+./assetchains
+# and wait 15 minutes before you go to the next step
 cd ~/SuperNET/iguana
 git checkout beta && git pull && ./m_notary && cd ~/komodo/src && ./dpowassets
 ```
