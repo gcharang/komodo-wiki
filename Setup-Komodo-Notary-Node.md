@@ -166,7 +166,7 @@ To start the daemon to import btcdwif later on this setup
 ./src/komodod &
 ```
 
-### Komodo is mining right now.
+### Komodo is now performing the initial blockchain download.
 Here are some additional commands which will be handy in the future
 
 This will get the stats:
