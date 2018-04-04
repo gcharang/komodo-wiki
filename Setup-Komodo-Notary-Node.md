@@ -56,7 +56,7 @@ The following packages are needed:
 sudo apt-get install build-essential pkg-config libc6-dev m4 \
 		g++-multilib autoconf libtool ncurses-dev unzip git python \
 		zlib1g-dev wget bsdmainutils automake libboost-all-dev \
-		libssl-dev libprotobuf-dev protobuf-compiler libqt4-dev \
+		libssl-dev libprotobuf-dev protobuf-compiler \
 		libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common \
 		curl libevent-dev libcurl4-gnutls-dev cmake clang
 ```
@@ -81,7 +81,7 @@ Let us first install Bitcoind, because it takes some time to sync it all up (aro
 ```shell
 sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo apt-get update
-sudo apt-get install bitcoind bitcoin-qt
+sudo apt-get install bitcoind
 ```
 
 Let's create folder .bitcoin
