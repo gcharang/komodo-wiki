@@ -61,21 +61,23 @@ A more smoothly reducing reward that halves every 210000 blocks would be:
 -ac_cc=1
 ```
 
-## -ac_staking=perc
+## -ac_staked=perc
 _(Currently available only in jl777 branch)_
 
-In some cases it is desirable to have as secure a way to create blocks as possible without relying on hashrate. In order to achieve this the -ac_staking option has been created. The percentage parameter sets the target percentage of blocks that are generated via PoS.
+We added PoW balancing to the `-ac_staked`, so the `-ac_staked=nn` means target nn% of blocks to be staked and the rest PoW.
+`./komodod -ac_name=STEST3 -ac_staked=77 -ac_supply=100000000  -ac_reward=300000000 -addnode=136.243.58.134 &`
 
-The constraints of -ac_staking were to be a decent implementation that doesnt change the block or tx format so it can be fully compatible with the existing infrastructure of wallets, explorers, atomic swaps, etc. In order to achieve this a special tx is added to the block as the last transaction. This is the transaction that spends the utxo that staked the block.
+In some cases it is desirable to have as secure a way to create blocks as possible without relying on hashrate. In order to achieve this the `-ac_staked` option has been created. The percentage parameter sets the target percentage of blocks that are generated via PoS.
+
+The constraints of `-ac_staked` were to be a decent implementation that doesn't change the block or tx format so it can be fully compatible with the existing infrastructure of wallets, explorers, atomic swaps, etc. In order to achieve this a special tx is added to the block as the last transaction. This is the transaction that spends the utxo that staked the block.
 
 The following are the (current) rules for staking a block:
 
 1. block timestamps are used as the monotonically increasing timestamp.
 
-2. In order to start staking you need to have -pubkey set
+2. In order to start staking you need to have `-pubkey` set
 
-3. A utxo is not eligible without nLockTime set and until 100*expected blocktimes has passed, 6000 seconds
-2b.
+3. A utxo is not eligible without `nLockTime` set and until 100*expected blocktimes has passed, 6000 seconds.
 
 4. There are 64 different subsets of addresses, based on the hash of the destination address. Each subset will take turns being subset0 at each height, ie. (height % 64) -> the subset0 for that height. All other subsets will adjust the elapsed time by subsetid seconds
 
