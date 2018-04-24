@@ -2,6 +2,11 @@ To run Komodo in debug mode and help developer troubleshoot issues found at clie
 
 NOTE: These steps are including notary node references in komodod command, but in case you are not a notary node, you don't need to include those command parameters.
 
+## Prerequisite is to install gdb
+```
+sudo apt-get install gdb
+```
+
 ## Run Komodo daemon with gdb tool
 Whichever komodod command you are running which results in crashing or problematic behavior run it with `gdb -args`
 
