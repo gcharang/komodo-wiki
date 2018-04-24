@@ -13,6 +13,7 @@ Whichever komodod command you are running which results in crashing or problemat
 ```shell
 gdb -args  ./src/komodod -gen -genproclimit=2 -notary -pubkey="03af2412ebf9517a43d192193490476fd0a44312c70755e07eb03b6d71338ebc9d"
 ```
+_If you have trouble getting it started, try using the full path to the executable._
 
 The above command initialize debugging.
 
