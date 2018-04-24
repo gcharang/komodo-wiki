@@ -16,14 +16,14 @@ cd ~/komodo/src
 `./clearassets`
 
 
-### I get "Error: Cannot obtain a lock on data directory /home/komodo/.komodo/USD. Zcash is probably already running." when i run it
+### I get "Error: Cannot obtain a lock on data directory /home/komodo/.komodo/REVS. Zcash is probably already running." when i run it
 
 ```
 cd ~/komodo/src
-fiat/usd stop
+fiat/revs stop
 ```
 
-### How can i see if i'm in sync?
+### How can I see if I'm in sync?
 
 ```
 cd ~/komodo/src
