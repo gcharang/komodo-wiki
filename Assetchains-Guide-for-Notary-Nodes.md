@@ -4,28 +4,28 @@ This is a small troubleshoot page how to act when some issues comes above.
 
 ### How do I start the assetchains?
 
-```
+```shell
 cd ~/komodo/src
 ./assetchains
 ```
 
 ### Clear all assetchain data
 
-
-`cd ~/komodo/src`   
-`./clearassets`
-
+```shell
+cd ~/komodo/src
+./clearassets
+```
 
 ### I get "Error: Cannot obtain a lock on data directory /home/komodo/.komodo/REVS. Zcash is probably already running." when i run it
 
-```
+```shell
 cd ~/komodo/src
 fiat/revs stop
 ```
 
 ### How can I see if I'm in sync?
 
-```
+```shell
 cd ~/komodo/src
 ./fiat-cli getbestblockhash
 ```
@@ -106,7 +106,7 @@ cd ~/komodo/src
 ./fiat-cli stop
 ```
 
-### I receive "error i.1 vs n.2" in the output when I start ./assetchains. Harmless errors, no problem with it. Let it run.
+### I receive "error i.1 vs n.2" in the output when I start `./assetchains`. Harmless errors, no problem with it. Let it run.
 
 ### I can't get it to run?
 
@@ -124,7 +124,7 @@ mv ../wallet.dat .
 cd ..
 ./start
 # wait for resync
-cd ~/KomodoPlatform/iguana/
+cd ~/SuperNET/iguana/
 ./m_notary
 # Wait a couple minutes
 cd ~/komodo/src/
@@ -235,7 +235,7 @@ rm -rf ~/.komodo/PRLPAY
 
 ```
 cd
-cd KomodoPlatform/iguana
+cd SuperNET/iguana
 git fetch && git checkout beta && ./m_notary
 ```
 
