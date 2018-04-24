@@ -89,7 +89,7 @@ bntn
 
 Stop the corresponding fiat value and start it again. For instance REVS:
 
-```
+```shell
 cd ~/komodo/src
 fiat/revs stop
 rm -rf ~/.komodo/REVS
@@ -101,7 +101,7 @@ Yes, each asset value starts a komodod task
 
 ### How to stop all of them?
 
-```
+```shell
 cd ~/komodo/src
 ./fiat-cli stop
 ```
@@ -110,7 +110,7 @@ cd ~/komodo/src
 
 ### I can't get it to run?
 
-```
+```shell
 # make sure all komodod / iguana processes are stopped
 cd ~/komodo/src/
 git pull
@@ -148,14 +148,14 @@ cd komodo && git fetch && git checkout beta && git pull && make -j8
 
 3 Delete files from the .komodo folder
 
-```
+```shell
 cd ~/.komodo
 rm -rf blocks chainstate debug.log komodostate db.log
 ```
 
 4 Start the ./start script to resync the komodo chain
 
-```
+```shell
 cd
 ./start
 ```
@@ -164,19 +164,19 @@ cd
 
 6 Go to ~/komodo/src
 
-```
+```shell
 cd ~/komodo/src
 ```
 
 7 Edit clearassets and delete everything in it
 
-```
+```shell
 vi clearassets (and delete everything in it)
 ```
 
 8 And paste the following in it:
 
-```
+```shell
 rm -rf ~/.komodo/REVS
 rm -rf ~/.komodo/SUPERNET
 rm -rf ~/.komodo/DEX
@@ -209,31 +209,31 @@ rm -rf ~/.komodo/PRLPAY
 
 9 Save it and run clearassets
 
-```
+```shell
 ./clearassets
 ```
 
 10 Run assetchains
 
-```
+```shell
 ./assetchains
 ```
 
 11 Wait for it until it stops doing its thing. The import your BTCDwif key
 
-```
+```shell
 ./fiat-cli importprivkey U*************************** (your BTCDwif key)
 ```
 
 12 After it is finished fund your assets with your BTCD address
 
-```
+```shell
 ./assetfunds R********************* (your BTCD address)
 ```
 
 13 When that is done, start notarizing
 
-```
+```shell
 cd
 cd SuperNET/iguana
 git fetch && git checkout beta && ./m_notary
