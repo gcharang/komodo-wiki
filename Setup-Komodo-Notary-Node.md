@@ -356,7 +356,6 @@ nano .chips/chips.conf
 rpcuser=metaphilibert
 rpcpassword=WirelessCoinForever
 txindex=1
-server=1
 daemon=1
 ```
 
