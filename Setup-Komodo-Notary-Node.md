@@ -320,6 +320,7 @@ This will trigger blockchain rescan and may take a very long time. Wait for the 
 cd ~
 git clone https://github.com/jl777/chips3.git
 cd chips3/
+git checkout dev
 ```
 
 Build Berkeley DB 4.8
