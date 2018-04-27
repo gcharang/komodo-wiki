@@ -127,7 +127,7 @@ Now it is time to install Komodo. Follow each line step by step and ignore the "
 cd ~
 git clone https://github.com/jl777/komodo
 cd komodo
-git checkout beta
+git checkout dev
 ./zcutil/fetch-params.sh
 ```
 
@@ -195,7 +195,7 @@ Personally I prefer to have a full downloaded Bitcoin blockchain. But be sure yo
 cd ~
 git clone https://github.com/jl777/SuperNET
 cd SuperNET/iguana
-git checkout beta
+git checkout dev
 ./m_LP
 ```
 
@@ -457,7 +457,7 @@ cd komodo/src
 ./assetchains
 # and wait 15 minutes before you go to the next step
 cd ~/SuperNET/iguana
-git checkout beta && git pull && ./m_notary && cd ~/komodo/src && ./dpowassets
+git checkout dev && git pull && ./m_notary && cd ~/komodo/src && ./dpowassets
 ```
 
 We are done! If you have given the btcpubkey to James and he has added it to the notaries.h files (located https://github.com/jl777/SuperNET/blob/master/iguana/notaries.h) everything should work now.
