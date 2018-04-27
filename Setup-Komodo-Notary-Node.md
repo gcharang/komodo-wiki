@@ -348,40 +348,42 @@ cd ~/chips3
 make -j$(nproc)
 ```
 
-> Create chips.conf file with random username, password, txindex and daemon turned on:
+Create chips.conf file with random username, password, txindex and daemon turned on:
 ```shell
 cd ~
 mkdir .chips
 nano .chips/chips.conf
 ```
 
-> Add the following lines into your `chips.conf` file
+Add the following lines into your `chips.conf` file
 
 ```
 rpcuser=metaphilibert
 rpcpassword=WirelessCoinForever
 txindex=1
 daemon=1
+addnode=5.9.253.195
+addnode=74.208.210.191
 ```
 
-> Symlinking the binaries
+Symlinking the binaries
 ```shell
 sudo ln -sf /home/$USER/chips3/src/chips-cli /usr/local/bin/chips-cli
 sudo ln -sf /home/$USER/chips3/src/chipsd /usr/local/bin/chipsd
 sudo chmod +x /usr/local/bin/chips-cli
 sudo chmod +x /usr/local/bin/chipsd
 ```
-> Run!
+Run!
 ```shell
 chipsd
 ```
 
-> Check
+Check
 ```shell
 chips-cli getinfo
 ```
 
-> Import privkey 
+Import privkey 
 ```shell
 chips-cli importprivkey BTCDwif
 # replace BTCDwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
