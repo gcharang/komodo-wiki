@@ -318,6 +318,7 @@ This will trigger blockchain rescan and may take a very long time. Wait for the 
 ## Install Chips:
 ```shell
 cd ~
+sudo apt-get update && sudo apt-get install software-properties-common autoconf git build-essential libtool libprotobuf-c-dev libgmp-dev libsqlite3-dev python python3 zip jq libevent-dev pkg-config libssl-dev libcurl4-gnutls-dev cmake -y
 git clone https://github.com/jl777/chips3.git
 cd chips3/
 git checkout dev
@@ -341,7 +342,6 @@ make install
 Build Chips
 
 ```shell
-sudo apt-get update && sudo apt-get install libevent-dev
 cd ~/chips3
 ./autogen.sh
 ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc --disable-tests --disable-bench --with-gui=no
@@ -358,8 +358,8 @@ nano .chips/chips.conf
 Add the following lines into your `chips.conf` file
 
 ```
-rpcuser=metaphilibert
-rpcpassword=WirelessCoinForever
+rpcuser=chipsuser
+rpcpassword=passworddrowssap
 txindex=1
 daemon=1
 addnode=5.9.253.195
