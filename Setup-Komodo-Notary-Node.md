@@ -321,7 +321,9 @@ cd ~
 git clone https://github.com/jl777/chips3.git
 cd chips3/
 ```
-> Build Berkeley DB 4.8
+
+Build Berkeley DB 4.8
+
 ```shell
 CHIPS_ROOT=$(pwd)
 BDB_PREFIX="${CHIPS_ROOT}/db4"
@@ -335,11 +337,13 @@ make -j$(nproc)
 make install 
 ```
 
-> Build Chips
+Build Chips
+
 ```shell
+sudo apt-get update && sudo apt-get install libevent-dev
 cd ~/chips3
 ./autogen.sh
-./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc
+./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc --disable-tests --disable-bench --with-gui=no
 make -j$(nproc)
 ```
 
