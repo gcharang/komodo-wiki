@@ -464,7 +464,9 @@ cd komodo/src
 ./assetchains
 # and wait 15 minutes before you go to the next step
 cd ~/SuperNET/iguana
-git checkout dev && git pull && ./m_notary && cd ~/komodo/src && ./dpowassets
+git checkout dev && git pull && ./m_notary &
+# wait until you see `INIT with 64 notaries`
+cd ~/komodo/src && ./dpowassets
 ```
 
 We are done! If you have given the btcpubkey to James and he has added it to the notaries.h files (located https://github.com/jl777/SuperNET/blob/master/iguana/notaries.h) everything should work now.
