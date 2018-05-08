@@ -254,8 +254,13 @@ Copy these files then change them from using port 7778 to 7776
 ```shell
 cp ~/SuperNET/iguana/coins/btc ~/SuperNET/iguana/
 cp ~/SuperNET/iguana/coins/kmd ~/SuperNET/iguana/
-cp ~/SuperNET/iguana/wp ~/SuperNET/iguana/wp_7776
 ```
+
+Create the wallet passphrase (unlocking) api call at ~/SuperNET/iguana/wp_7776 - this gets called at notary start up
+```
+curl --url "http://127.0.0.1:7776" --data "{\"method\":\"walletpassphrase\",\"params\":[\"YOUR VERY SECURE PASSPHRASE\", 9999999]}"
+```
+
 
 Now create a new file for the btcpubkey. Enter it as:
 pubkey=xxxxxxxxxxxxxxxxxxxxxxx
