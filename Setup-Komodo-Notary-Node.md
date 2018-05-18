@@ -404,7 +404,7 @@ vim start
 Paste into file and replace the pubkey with your **btcpubkey** and save it.
 ```shell
 bitcoind &
-chipsd &
+chipsd -pubkey="0225aa6f6f19e543180b31153d9e6d55d41bc7ec2ba191fd29f19a2f973544e29d" &
 cd komodo
 ./src/komodod -gen -genproclimit=2 -notary -pubkey="0225aa6f6f19e543180b31153d9e6d55d41bc7ec2ba191fd29f19a2f973544e29d" &
 ```
