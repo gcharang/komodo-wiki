@@ -8,7 +8,7 @@ N.B.: This doc is similar to compiling komodo with additional `verify` script. P
 
 1. Install Dependencies (most needed for the first time)
 2. Clone komodo repo and compile
-3. Clear all assetchaiins dir .komodo data dir
+3. Create `komodo.conf` file and clear all assetchaiins dir from `.komodo` data dir
 4. Start AC using `./assetchains.old` and let them sync (it may take a while)
 5. Verify the assetchains
 
@@ -16,9 +16,9 @@ N.B.: This doc is similar to compiling komodo with additional `verify` script. P
 
 ### 1. Install dependencies
 
-```
+```shell
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang -y
+sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang jq -y
 cd ~
 git clone https://github.com/nanomsg/nanomsg
 cd nanomsg
@@ -29,27 +29,46 @@ sudo ldconfig
 
 ```
 
-### 2. Clone and Compile
+### 2. Clone, Compile & Symlink
 
-```
+```shell
 cd ~
 git clone https://github.com/jl777/komodo
 cd komodo
 git checkout jl777
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
+sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
+sudo ln -sf /home/$USER/komodo/src/komodod /usr/local/bin/komodod
+sudo chmod +x /usr/local/bin/komodo-cli
+sudo chmod +x /usr/local/bin/komodod
 ```
 
-### 3. Clear existing assetchains database and files
+### 3. Create `komodo.conf` & clear existing assetchains database and files
 
+Create `komodo.conf`
+```shell
+cd ~/.komodo
+nano komodo.conf
 ```
+> Paste the following content inside the file and save it. Don't forget to change values for `rpcuser` & `rpcpassword`.
+```JSON
+rpcuser=bitcoinrpc
+rpcpassword=password
+txindex=1
+bind=127.0.0.1
+rpcbind=127.0.0.1
+```
+
+Remove existing assetchain block database and files
+```shell
 cd ~/.komodo
 rm -rf AXO  BEER  BET  BNTN  BOTS  BTCH  CEAL  CHAIN  COQUI  CRYPTO  DEX  DSEC  ETOMIC  HODL  JUMBLR  KV  MESH  MGW  MNZ  MSHARK  NINJA  OOT  PANGEA  PIZZA  PRLPAY  REVS  SUPERNET  WLC
 ```
 
 ### 4. Start all assetchains
 
-```
+```shell
 cd ~/komodo/src
 ./assetchains.old
 ```
@@ -57,25 +76,17 @@ cd ~/komodo/src
 
 ### 5a. Create `verify` script and get `coinlist` file
 
-```
+```shell
 cd ~
 wget -qO coinlist https://raw.githubusercontent.com/KomodoPlatform/komodotools/master/webworker01/coinlist
 nano verify
-# paste the following content into it and save the file
+```
+> paste the following content into it and save the file
+```shell
 #!/bin/bash
 
 source coinlist
 forked=false
-
-blocks=$(komodo-cli getinfo | jq .blocks)
-longest=$(komodo-cli getinfo | jq .longestchain)
-
-if ((blocks < longest)); then
-    forked=true
-    printf "\033[0;31mKMD - Possible fork!\033[0m Blocks $blocks < LongestChain $longest\n"
-else
-    echo "KMD - Blocks $blocks = LongestChain $longest"
-fi
 
 for coins in "${coinlist[@]}"; do
     coin=($coins)
@@ -95,21 +106,21 @@ if [ "$forked" = false ]; then
     printf "\033[0;32mAll coins are fine\033[0m\n"
 fi
 ```
-# change permission of `verify` file
+> change permission of `verify` script
 ```
 chmod +x verify
 ```
 
 ### 5b. Verify the block height
 
-```
+```shell
 ./verify
 ```
 
 Result:
 The result will similar to below. At the end of the output you will see `All coins are fine`.
 
-```
+```JSON
 KMD - Blocks 842790 = LongestChain 842790
 CHIPS - Blocks 1987211 = Headers 1987211
 REVS - Blocks 162517 = LongestChain 162517
