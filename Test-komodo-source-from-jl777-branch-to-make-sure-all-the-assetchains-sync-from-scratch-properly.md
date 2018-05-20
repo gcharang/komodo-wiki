@@ -139,6 +139,6 @@ OOT - Blocks 41106 = LongestChain 41106
 BNTN - Blocks 39911 = LongestChain 39911
 CHAIN - Blocks 2722 = LongestChain 2722
 PRLPAY - Blocks 1335 = LongestChain 1335
-DSEC - Blocks 230 = LongestChain 0
+DSEC - Blocks 230 = LongestChain 230
 All coins are fine
 ```
