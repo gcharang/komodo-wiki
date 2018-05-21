@@ -27,4 +27,5 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [JUMBLR Whitepaper](https://github.com/KomodoPlatform/komodo/wiki/JUMBLR-Whitepaper)
 
 ### Testing & QA
-[Test komodo source from jl777 branch to make sure all the assetchains sync from scratch properly](https://github.com/KomodoPlatform/komodo/wiki/Test-komodo-source-from-jl777-branch-to-make-sure-all-the-assetchains-sync-from-scratch-properly)
+[Test komodo source from jl777 branch to make sure all the assetchains sync from scratch properly](https://github.com/KomodoPlatform/komodo/wiki/Test-komodo-source-from-jl777-branch-to-make-sure-all-the-assetchains-sync-from-scratch-properly)  
+[Debug Komodo](https://github.com/KomodoPlatform/komodo/wiki/Debug-Komodo)  
