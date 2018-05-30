@@ -6,66 +6,21 @@ Go into the Komodo folder
 
 ```
 cd komodo
-```
-
-Do a git pull
-
-```
+make clean
+git checkout beta
 git pull
-```
-
-**ATTENTION: When it is not a new beta version you do make in the ~/komodo/src dir**
-
-```
-cd src
-make
-```
-
-**ATTENTION: If it is a new beta version you forget above and do what is down under**
-
-```
-git checkout dPoW
-```
-
-The follow the following steps:
-
-```
-./zcutil/fetch-params.sh
-```
-
-```
 ./zcutil/build.sh -j8
 ```
 
-After that, go to your .komodo folder
+**If you need to resync from scratch follow the instructions below:**
+
+Go to your `.komodo` folder, remove the following files and start `komodod`.
 
 ```
 cd ~/.komodo
-```
-
-Remove the following files
-
-```
 rm -rf blocks chainstate debug.log komodostate db.log
-```
-
-Go back to you home folder
-
-```
-cd ~
-```
-
-Run your start script
-
-```
-./start
-```
-
-Let it resync (check with the getinfo command). When it is done resync, start Iguana
-
-```
-cd ~/KomodoPlatform/iguana
-./m_notary
+cd ~/komodo/src
+./komodod &
 ```
 
 It has been done
