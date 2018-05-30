@@ -151,8 +151,6 @@ Add the following lines to the komodo.conf file (replace rpcuser and rpcpassword
 rpcuser=bitcoinrpc
 rpcpassword=password
 txindex=1
-bind=127.0.0.1
-rpcbind=127.0.0.1
 ```
 
 Now let's start the mining process. Use CTRL-C to get out when you miss your cursor
