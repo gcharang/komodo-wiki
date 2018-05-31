@@ -1,4 +1,4 @@
-# KomodoPlatform-wiki
+# Komodo-wiki
 
 This is a cloned wiki of the repository https://github.com/KomodoPlatform/komodo for easy contribution of edits.
 To understand the process, see https://gist.github.com/larrybotha/10650410 and https://stackoverflow.com/a/11481887/9551761
