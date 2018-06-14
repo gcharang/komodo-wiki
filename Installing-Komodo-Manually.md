@@ -189,20 +189,20 @@ Now install the dependency packages:
 ```shell
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
-brew install gcc
-brew install cmake
-brew install leveldb
+brew install gcc5
 brew install binutils
 brew install protobuf
 brew install coreutils
 brew install wget
 brew install nanomsg
 ```
-(thanks to radix42)
+or
+
+`brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc5 binutils protobuf coreutils wget nanomsg`
 
 #### Clone the Komodo repository
 ```shell
-git clone https://github.com/jl777/komodo
+git clone https://github.com/KomodoPlatform/komodo
 ```
 
 #### Get the proving keys:
@@ -213,7 +213,7 @@ cd komodo
 
 #### And now build Komodo
 ```shell
-git checkout beta
+git checkout dev
 ./zcutil/build-mac.sh
 ```
 This can take some time, so let's create a configuration file in the mean time. 
