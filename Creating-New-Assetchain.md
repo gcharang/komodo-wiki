@@ -7,7 +7,7 @@ The above will start a new assetchain with name "EXAMPLECHAIN" and start generat
 The first node which spawned a new assetchain will mine first 100 blocks.
 And that same first node will also hold the supply of this assetchains' token 1000000.
 
-500 milliom max is good to use, to avoid 64 bit overflows.
+**Note: Recommended max supply is 1 Billion.**
 
 #### Querying Assetchain
 You can query for assetchain blocks and balances with this komodo CLI command:
