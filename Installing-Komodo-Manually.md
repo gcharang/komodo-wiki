@@ -278,19 +278,33 @@ Open a Command Prompt for the following steps.
 When Notepad opens click Yes to create the komodo.conf file. Copy the information below and paste it into Notepad. 
 
 > rpcuser=yourRpcUserName
+
 > rpcpassword=yourSecurePassword
+
 > daemon=1
+
 > rpcallowip=127.0.0.1
+
 > rpcbind=127.0.0.1
+
 > server=1
+
 > listen=1
+
 > addnode=5.9.102.210
+
 > addnode=78.47.196.146
+
 > addnode=178.63.69.164
+
 > addnode=88.198.65.74
+
 > addnode=5.9.122.241
+
 > addnode=144.76.94.38
+
 > txindex=1
+
 > maxconnections=1
 
 
