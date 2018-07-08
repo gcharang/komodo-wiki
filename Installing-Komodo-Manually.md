@@ -255,9 +255,6 @@ or get info with the getinfo command:
 
 # Installing Komodo on Windows 64-bit
 
-How to Install Komodod (non-gui) on Windows 
-
-
 PLEASE FOLLOW THE VIDEO TUTORIAL: https://youtu.be/gfZZy8b222E
 
 
@@ -269,23 +266,16 @@ Open a Command Prompt for the following steps.
 
 
 2. Next we'll create the Komodo directory in the AppData directory.
-C#
 
-mkdir "%HOMEPATH%\AppData\Roaming\komodo"
+`mkdir "%HOMEPATH%\AppData\Roaming\komodo"`
 
 
 3. Next we will create our komodo.conf file.
 
-
-HTML
-
-notepad “%HOMEPATH%\AppData\Roaming\Komodo\komodo.conf”
+`notepad “%HOMEPATH%\AppData\Roaming\Komodo\komodo.conf”`
 
 
 When Notepad opens click Yes to create the komodo.conf file. Copy the information below and paste it into Notepad. 
-
-
-C#
 
 > rpcuser=yourRpcUserName
 > rpcpassword=yourSecurePassword
@@ -302,7 +292,6 @@ C#
 > addnode=144.76.94.38
 > txindex=1
 > maxconnections=1
-
 
 
 After pasting, save and exit Notepad.
