@@ -2,7 +2,7 @@
 
 Note: This is still in *BETA phase*. This is to give you a good understanding on building a Komodo Notary Node, but it is possible that some commands could be deprecated by the time you read it. 
 
-If you have any problems, please join #notarynode on the [Komodo Slack](https://komodo-platform.slack.com)
+If you have any problems, please join #notarynode on the [Komodo Discord](https://discord.gg/SCdf4eh)
 
 # Requirements
 
@@ -321,7 +321,7 @@ This will trigger blockchain rescan and may take a very long time. Wait for the 
 ## Install Chips:
 ```shell
 cd ~
-sudo apt-get update && sudo apt-get install software-properties-common autoconf git build-essential libtool libprotobuf-c-dev libgmp-dev libsqlite3-dev python python3 zip jq libevent-dev pkg-config libssl-dev libcurl4-gnutls-dev cmake -y
+sudo apt-get update && sudo apt-get install software-properties-common autoconf git build-essential libtool libprotobuf-c-dev libgmp-dev libsqlite3-dev python python3 zip jq libevent-dev pkg-config libssl-dev libcurl4-gnutls-dev cmake libboost-all-dev -y
 git clone https://github.com/jl777/chips3.git
 cd chips3/
 git checkout dev

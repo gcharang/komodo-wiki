@@ -252,3 +252,102 @@ or get info with the getinfo command:
 ```shell
 ./komodo-cli getinfo
 ```
+
+# Installing Komodo on Windows 64-bit
+
+PLEASE FOLLOW THE VIDEO TUTORIAL: https://youtu.be/gfZZy8b222E
+
+
+
+1. First download komodo windows [binaries](https://artifacts.supernet.org/latest/windows/) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
+
+
+Open a Command Prompt for the following steps.
+
+
+2. Next we'll create the Komodo directory in the AppData directory.
+
+`mkdir "%HOMEPATH%\AppData\Roaming\komodo"`
+
+
+3. Next we will create our komodo.conf file.
+
+`notepad “%HOMEPATH%\AppData\Roaming\Komodo\komodo.conf”`
+
+
+When Notepad opens click Yes to create the komodo.conf file. Copy the information below and paste it into Notepad. 
+
+> rpcuser=yourRpcUserName
+
+> rpcpassword=yourSecurePassword
+
+> daemon=1
+
+> rpcallowip=127.0.0.1
+
+> rpcbind=127.0.0.1
+
+> server=1
+
+> listen=1
+
+> addnode=5.9.102.210
+
+> addnode=78.47.196.146
+
+> addnode=178.63.69.164
+
+> addnode=88.198.65.74
+
+> addnode=5.9.122.241
+
+> addnode=144.76.94.38
+
+> txindex=1
+
+> maxconnections=1
+
+
+After pasting, save and exit Notepad.
+
+
+4. So now that you have created your komodo.conf file you are ready to download the [zk-snark proving key](https://z.cash/downloads/sprout-proving.key) and; [verifying key](https://z.cash/downloads/sprout-verifying.key). 
+
+
+While the keys are downloading let's paste following command to create the directory for ZcashParams:
+HTML
+
+`mkdir “%HOMEPATH%\AppData\Roaming\ZcashParams”`
+
+
+One the keys have finished downloading we'll paste this command to move the keys to our newly created ZcashParams directory:
+HTML
+
+`move “%HOMEPATH%\Downloads\sprout-proving.key” “%HOMEPATH%\AppData\Roaming\ZcashParams” && move “%HOMEPATH%\Downloads\sprout-verifying.key” “%HOMEPATH%\AppData\Roaming\ZcashParams”`
+
+
+5. Now we can run komodod.exe
+HTML
+
+`"%HOMEPATH%\Desktop\kmd\komodod.exe"`
+
+
+6. Komodod should start synching. You can check progress by running 
+HTML
+
+`"%HOMEPATH%\Desktop\kmd\komodo-cli.exe" getinfo`
+
+
+
+7. To stop komodod, run: 
+
+`"%HOMEPATH%\Desktop\kmd\komodo-cli.exe" stop`
+
+
+Downloads:
+
+Windows Binaries: https://artifacts.supernet.org/latest/windows/
+
+Zk-snark proving keys: https://z.cash/downloads/sprout-proving.key
+
+Verifying keys: https://z.cash/downloads/sprout-verifying.key
