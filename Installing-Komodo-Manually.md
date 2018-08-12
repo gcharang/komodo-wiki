@@ -177,7 +177,7 @@ mv ~/wallet.dat ~/wallet_backup_21May2017.dat
 tar -czvf ~/wallet_backup_21May2017.dat.tgz ~/wallet_backup_21May2017.dat
 ```
 
-# Installing Komodo on OSx
+# Installing Komodo on OSX
 
 ### Requirements
 Packages are installed through homebrew, make sure to install it: 
