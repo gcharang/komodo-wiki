@@ -189,7 +189,7 @@ Now install the dependency packages:
 ```shell
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
-brew install gcc5
+brew install gcc6
 brew install binutils
 brew install protobuf
 brew install coreutils
@@ -198,7 +198,7 @@ brew install nanomsg
 ```
 or
 
-`brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc5 binutils protobuf coreutils wget nanomsg`
+`brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc6 binutils protobuf coreutils wget nanomsg`
 
 #### Clone the Komodo repository
 ```shell
