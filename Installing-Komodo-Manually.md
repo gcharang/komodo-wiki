@@ -189,7 +189,7 @@ Now install the dependency packages:
 ```shell
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
-brew install gcc6
+brew install gcc@6
 brew install binutils
 brew install protobuf
 brew install coreutils
