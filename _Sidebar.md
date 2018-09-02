@@ -29,3 +29,7 @@
 
 **Testers**  
 [debug Komodo](https://github.com/KomodoPlatform/komodo/wiki/Debug-Komodo)  
+
+---
+
+[List of all KomodoPlatform Project links](https://github.com/KomodoPlatform/KomodoPlatform/wiki/Source-of-all-KomodoPlatform-Repositories-and-Releases)
