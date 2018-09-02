@@ -9,7 +9,7 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [Create Komodo Assetchain](https://github.com/KomodoPlatform/komodo/wiki/Creating-New-Assetchain)  
 [Smartaddress FAQ](https://github.com/KomodoPlatform/komodo/wiki/FAQ-for-smartaddresses)  
 [Using JUMBLR](https://github.com/KomodoPlatform/komodo/wiki/Using-JUMBLR)  
-[Setup Explorer for Komodo and Assetchains](https://github.com/DeckerSU/komodo-explorers-install)
+[Setup Insight Explorer for Komodo and Assetchains](https://github.com/DeckerSU/komodo-explorers-install)
 
 ### Notary Node
 
