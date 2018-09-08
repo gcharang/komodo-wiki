@@ -259,7 +259,7 @@ PLEASE FOLLOW THE VIDEO TUTORIAL: https://youtu.be/gfZZy8b222E
 
 
 
-1. First download komodo windows [binaries](https://artifacts.supernet.org/latest/windows/) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
+1. First download komodo windows [binaries](https://artifacts.supernet.org/latest/komodo/windows/) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
 
 
 Open a Command Prompt for the following steps.
