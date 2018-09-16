@@ -92,7 +92,7 @@ cd .bitcoin
 vim bitcoin.conf
 ```
 
-Paste this in your bitcoin.conf (replace recuser and rpcpassword)
+Paste this in your bitcoin.conf (replace rpcuser and rpcpassword)
 ```JSON
 server=1
 daemon=1
