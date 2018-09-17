@@ -6,6 +6,10 @@ We can just use the following script to do manual UTXO split. The script uses sa
 
 ### Step 1: Create `acsplit` script
 ```shell
+nano acsplit
+```
+Enter the following into the `acsplit` file and save it.
+```shell
 #!/bin/bash
 curl --url "http://127.0.0.1:7776" --data "{\"coin\":\""${1}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${2}"}"
 ```
