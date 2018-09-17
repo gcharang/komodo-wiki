@@ -11,14 +11,17 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [Using JUMBLR](https://github.com/KomodoPlatform/komodo/wiki/Using-JUMBLR)  
 [Setup Insight Explorer for Komodo and Assetchains (all-in-one script)](https://github.com/DeckerSU/komodo-explorers-install)
 
-### Notary Node
+### Notary Node Setup
 
 [Setup Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Setup-Komodo-Notary-Node)  
 [Security Setup for Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Standard-Security-Setup-for-Nodes)  
+[Assetchains Guide for Komodo notary Nodes](https://github.com/KomodoPlatform/komodo/wiki/Assetchains-Guide-for-Notary-Nodes)  
+
+### Notary Node Maintenance
+[How to Split UTXO for Notarization](https://github.com/KomodoPlatform/komodo/wiki/How-to-Split-UTXO-for-Notarization)  
 [Updating Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Updating-notary-node-in-few-lessons)  
 [Monitor Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Monitor-your-Komodo-Notary-Node)  
-[Assetchains Guide for Komodo notary Nodes](https://github.com/KomodoPlatform/komodo/wiki/Assetchains-Guide-for-Notary-Nodes)  
-[Useful KNN Commands](https://github.com/KomodoPlatform/komodo/wiki/Useful-commands-KNN)
+[Useful KNN Commands](https://github.com/KomodoPlatform/komodo/wiki/Useful-commands-KNN)  
 
 ### Whitepaper
 
