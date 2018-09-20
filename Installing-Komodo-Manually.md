@@ -177,7 +177,7 @@ mv ~/wallet.dat ~/wallet_backup_21May2017.dat
 tar -czvf ~/wallet_backup_21May2017.dat.tgz ~/wallet_backup_21May2017.dat
 ```
 
-# Installing Komodo on OSx
+# Installing Komodo on OSX
 
 ### Requirements
 Packages are installed through homebrew, make sure to install it: 
@@ -189,7 +189,7 @@ Now install the dependency packages:
 ```shell
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
-brew install gcc5
+brew install gcc@6
 brew install binutils
 brew install protobuf
 brew install coreutils
@@ -198,7 +198,7 @@ brew install nanomsg
 ```
 or
 
-`brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc5 binutils protobuf coreutils wget nanomsg`
+`brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc6 binutils protobuf coreutils wget nanomsg`
 
 #### Clone the Komodo repository
 ```shell
@@ -259,7 +259,7 @@ PLEASE FOLLOW THE VIDEO TUTORIAL: https://youtu.be/gfZZy8b222E
 
 
 
-1. First download komodo windows [binaries](https://artifacts.supernet.org/latest/windows/) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
+1. First download komodo windows [binaries](https://artifacts.supernet.org/latest/komodo/windows/) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
 
 
 Open a Command Prompt for the following steps.
