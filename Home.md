@@ -18,6 +18,7 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [Assetchains Guide for Komodo notary Nodes](https://github.com/KomodoPlatform/komodo/wiki/Assetchains-Guide-for-Notary-Nodes)  
 
 ### Notary Node Maintenance
+[Notary Node Statistics](https://komodostats.com)
 [How to Split UTXO for Notarization](https://github.com/KomodoPlatform/komodo/wiki/How-to-Split-UTXO-for-Notarization)  
 [Updating Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Updating-notary-node-in-few-lessons)  
 [Monitor Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Monitor-your-Komodo-Notary-Node)  
