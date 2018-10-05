@@ -2,7 +2,7 @@
 -----------------------------
 
 ### Requirements
-- You need to have git and php7.0 or hhvm installed.
+- You need to have `git` and `php7.0` or `hhvm` installed.
 
 ### Steps
 1. Clone the repo
