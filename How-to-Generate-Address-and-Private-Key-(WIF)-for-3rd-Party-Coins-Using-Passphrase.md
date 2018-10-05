@@ -1,6 +1,4 @@
-## How to generate WIF for BTC, KMD, GAME, EMC2, HUSH or other 3rd Party Coins?
-
-This guide is intended for Notary Node operators. Other users may find it useful too. Please remember, this will only work for BTC, KMD, GAME, EMC2, HUSH coin.
+#### This guide is intended for Notary Node operators. Other users may find it useful too. Please remember, this only works for BTC, KMD, GAME, EMC2, HUSH coin currently.
 -----------------------------
 
 ### Requirements
