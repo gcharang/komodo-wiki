@@ -13,7 +13,7 @@ There are 3 ways you can get KMDICE coins now.
 3. OTC trades in [Komodo Discord](https://komodoplatform.com/discord)
 
 ## Get `pubkey` value
-We need to get `pubkey` value for the smartaddress you are going to use the KMDICE wallet with. `pubkey` is needed for CC use. If you already know the pubkey of the address you are going to use, please skip to the [next section](start-kmdice-with-pubkey).
+We need to get `pubkey` value for the smartaddress you are going to use the KMDICE wallet with. `pubkey` is needed for CC use. If you already know the pubkey of the address you are going to use, please skip to the [next section](https://github.com/KomodoPlatform/komodo/wiki/Detailed-Guide-to-Start-KMDICE-Chain-and-Play-Dice-Using-CLI#start-kmdice-with-pubkey-to-play-dice-game).
 
 ### Step 1
 Start the chain with the following command and wait for the daemon to sync.
