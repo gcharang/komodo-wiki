@@ -50,3 +50,5 @@ Requirements:
 2. Explorer - [https://github.com/jl777/coins/blob/master/explorers/ZEX](https://github.com/jl777/coins/blob/master/explorers/ZEX)  
 3. Coin info - [https://github.com/jl777/coins/blob/master/coins#L2789](https://github.com/jl777/coins/blob/master/coins#L2789)  
 4. Electrum servers (BEER as example)- [https://github.com/jl777/coins/blob/master/electrums/BEER](https://github.com/jl777/coins/blob/master/electrums/BEER)  
+
+Note: If you can't do it all by yourself, there are 3rd party services (Chainmakers & Chainzilla) available who can do everything for you. Please reach them out using [Komodo Discord](https://komodoplatform.com/discord).
