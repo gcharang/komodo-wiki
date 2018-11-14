@@ -8,6 +8,7 @@
 4. Integrate into Agama GUI wallet [https://docs.komodoplatform.com/agama/add-Komodo-Assetchains-Agama-Desktop.html](https://docs.komodoplatform.com/agama/add-Komodo-Assetchains-Agama-Desktop.html)  
 
 We have used Zaddex (ZEX) coin as example for some part of this doc. Please change to your coin name accordingly.
+
 Coin name: **Zaddex**  
 Ticker: **ZEX**  
 Start Command: **`./komodod -pubkey=$pubkey -ac_name=ZEX -ac_cc=2 -ac_founders=1 -ac_halving=525600 -ac_reward=13000000000 -ac_pubkey=039d4a50cc70d1184e462a22edb3b66385da97cc8059196f8305c184a3e21440af -addnode=5.9.102.21 &`**  
