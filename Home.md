@@ -9,8 +9,8 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [Create Komodo Assetchain](https://github.com/KomodoPlatform/komodo/wiki/Creating-New-Assetchain)  
 [Smartaddress FAQ](https://github.com/KomodoPlatform/komodo/wiki/FAQ-for-smartaddresses)  
 [Using JUMBLR](https://github.com/KomodoPlatform/komodo/wiki/Using-JUMBLR)  
-[Setup Insight Explorer for Komodo and Assetchains (all-in-one script)](https://github.com/DeckerSU/komodo-explorers-install)
-[Complete Checklist for New Coins to Setup Explorers, Electrum Servers, Agama Wallet, Activate dPoW & BarterDEX Trading](https://github.com/KomodoPlatform/komodo/wiki/Complete-Checklist-for-New-Coins-to-Setup-Explorers,-Electrum-Servers,-Agama-Wallet,-Activate-dPoW-&-BarterDEX-Trading)
+[Setup Insight Explorer for Komodo and Assetchains (all-in-one script)](https://github.com/DeckerSU/komodo-explorers-install)  
+[Complete Checklist for New Coins to Setup Explorers, Electrum Servers, Agama Wallet, Activate dPoW & BarterDEX Trading](https://github.com/KomodoPlatform/komodo/wiki/Complete-Checklist-for-New-Coins-to-Setup-Explorers,-Electrum-Servers,-Agama-Wallet,-Activate-dPoW-&-BarterDEX-Trading)  
 
 ### Notary Node Setup
 
