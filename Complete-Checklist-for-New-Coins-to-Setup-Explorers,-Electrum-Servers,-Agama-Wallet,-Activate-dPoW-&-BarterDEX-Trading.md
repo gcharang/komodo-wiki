@@ -36,7 +36,7 @@ Check [this commit](https://github.com/jl777/komodo/commit/7f5ed6ec453b78042bd79
 ### Step 2.2 Changes required for SuperNET repo
 For SuperNET repo we need to add 1 new file called [`zex_7776`](https://github.com/jl777/SuperNET/blob/dev/iguana/coins/zex_7776) inside `~/SuperNET/iguana/coins/` (please change zex with your coin ticker). **Make sure this file has executable permission.** This file gets created automatically in the directory where you start the chain from. Generally inside `~/komodo/src/` dir.
 
-And, we need to edit 4 existing files, [`dpowassets`](https://github.com/jl777/SuperNET/blob/dev/iguana/dpowassets#L50), [`iguana_notary.c`](https://github.com/jl777/SuperNET/blob/dev/iguana/iguana_notary.c#L543), [m_notary_run](https://github.com/jl777/SuperNET/blob/dev/iguana/m_notary_run#L106) & [`m_splitfund`](https://github.com/jl777/SuperNET/blob/dev/iguana/m_splitfund#L51)) inside `~/SuperNET/iguana/` dir. These links points to the line where you should be checking.
+And, we need to edit 4 existing files, [`dpowassets`](https://github.com/jl777/SuperNET/blob/dev/iguana/dpowassets#L50), [`iguana_notary.c`](https://github.com/jl777/SuperNET/blob/dev/iguana/iguana_notary.c#L543), [`m_notary_run`](https://github.com/jl777/SuperNET/blob/dev/iguana/m_notary_run#L106) & [`m_splitfund`](https://github.com/jl777/SuperNET/blob/dev/iguana/m_splitfund#L51)) inside `~/SuperNET/iguana/` dir. These links points to the line where you should be checking.
 
 Check [this commit](https://github.com/jl777/SuperNET/commit/c715f0aa4c99d20de6b99b5d173d543d2a94010f) to fully understand what was done to add ZEX in SuperNET repo.
 
