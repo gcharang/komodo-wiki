@@ -1,6 +1,13 @@
-In this guide we will use ZEX coin as example. Zaddex (ZEX) is a equihash minable coin with founders reward feature.
+**This doc will guide you through creating an independent assetchain/coin using Komodo and setup explorer, electrum servers, integrate into Agama GUI wallet, dPoW and enable BarterDEX trading.**
 
-## Step 1: Required Information
+## Step 1: Create an Assetchain/Coin, Setup Insight based Explorer, Electrum Servers and Agama GUI Wallet
+1. Create a new assetchain or coin [https://docs.komodoplatform.com/komodo/create-Komodo-Assetchain.html](https://docs.komodoplatform.com/komodo/create-Komodo-Assetchain.html)  
+1.1 Different Parameters to customize your coin [https://docs.komodoplatform.com/komodo/assetchain-params.html](https://docs.komodoplatform.com/komodo/assetchain-params.html)
+2. Install explorer [https://github.com/DeckerSU/komodo-explorers-install](https://github.com/DeckerSU/komodo-explorers-install)  
+3. Install Electrum SPV server [https://docs.komodoplatform.com/barterDEX/setup-electrumX-server.html](https://docs.komodoplatform.com/barterDEX/setup-electrumX-server.html)  
+4. Integrate into Agama GUI wallet [https://docs.komodoplatform.com/agama/add-Komodo-Assetchains-Agama-Desktop.html](https://docs.komodoplatform.com/agama/add-Komodo-Assetchains-Agama-Desktop.html)  
+
+We have used Zaddex (ZEX) coin as example for some part of this doc. Please change to your coin name accordingly.
 Coin name: **Zaddex**  
 Ticker: **ZEX**  
 Start Command: **`./komodod -pubkey=$pubkey -ac_name=ZEX -ac_cc=2 -ac_founders=1 -ac_halving=525600 -ac_reward=13000000000 -ac_pubkey=039d4a50cc70d1184e462a22edb3b66385da97cc8059196f8305c184a3e21440af -addnode=5.9.102.21 &`**  
@@ -35,7 +42,7 @@ Check [this commit](https://github.com/jl777/SuperNET/commit/c715f0aa4c99d20de6b
 Once you have all the changes done locally, you can submit a PR to Komodo and SuperNET repo `dev` branch. After the PR gets merged by jl777, it will be announced and Komodo Notary Node operators will update their node and start notarizing the coin.
 
 ## Step 3: PR List for enabling BarterDEX trading
-In order for the coin to be enabled in BarterDEX trading platform you need to submit a PR to [https://github.com/jl777/coins](https://github.com/jl777/coins) repo. The repo contains details of all information required.
+In order for the coin to be enabled in BarterDEX trading platform you need to submit a PR to [https://github.com/jl777/coins](https://github.com/jl777/coins) repo. Here is an useful guide for the process [https://docs.komodoplatform.com/barterDEX/add-coin-barterDEX.html](https://docs.komodoplatform.com/barterDEX/add-coin-barterDEX.html).
 
 Requirements:
 1. Logo (icon) - [https://github.com/jl777/coins/blob/master/icons/zex.png](https://github.com/jl777/coins/blob/master/icons/zex.png)  
