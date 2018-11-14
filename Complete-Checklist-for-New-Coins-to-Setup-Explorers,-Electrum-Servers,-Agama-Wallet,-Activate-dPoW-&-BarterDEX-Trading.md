@@ -11,7 +11,7 @@ We have used Zaddex (ZEX) coin as example for some part of this doc. Please chan
 
 Coin name: **Zaddex**  
 Ticker: **ZEX**  
-Start Command: **`./komodod -pubkey=$pubkey -ac_name=ZEX -ac_cc=2 -ac_founders=1 -ac_halving=525600 -ac_reward=13000000000 -ac_pubkey=039d4a50cc70d1184e462a22edb3b66385da97cc8059196f8305c184a3e21440af -addnode=5.9.102.21 &`**  
+Start Command: **`./komodod -pubkey=$pubkey -ac_name=ZEX -ac_cc=2 -ac_founders=1 -ac_halving=525600 -ac_reward=13000000000 -ac_pubkey=039d4a50cc70d1184e462a22edb3b66385da97cc8059196f8305c184a3e21440af -addnode=5.9.102.210 &`**  
 RPCport: **26477**  
 
 ## Step 2: PR List for Activating dPoW
