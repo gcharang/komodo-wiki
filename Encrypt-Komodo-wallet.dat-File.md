@@ -6,7 +6,7 @@ Komodo supports `encryptwallet` to secure your wallet.dat file. After encrypting
 - Native wallet daemon for KMD and/or any  `-ac_public` chains (SPV or Lite mode will not work)
 
 ## Precautions / Best Practices
-- Don't encrypt any wallet with z address. Transfer your funds from a private z address to transparent R address first ([Guide](https://support.komodoplatform.com/en/support/solutions/articles/29000026955-perform-z-transactions-using-agama/preview)).
+- Don't encrypt any wallet with z address. Transfer your funds from a private z address to transparent R address first ([Guide](https://support.komodoplatform.com/en/support/solutions/articles/29000026955-perform-z-transactions-using-agama)).
 - Don't forget your your password. If you do, you will loose access to your funds.
 - Use a strong password containing letters, numbers, UPPERCASE, lowercase, special characters.
 - Always keep a backup or write down your password, passphrase and private keys in a safe place.
