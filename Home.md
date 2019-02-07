@@ -12,6 +12,10 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [Setup Insight Explorer for Komodo and Assetchains (all-in-one script)](https://github.com/DeckerSU/komodo-explorers-install)  
 [Complete Checklist for New Coins to Setup Explorers, Electrum Servers, Agama Wallet, Activate dPoW & BarterDEX Trading](https://github.com/KomodoPlatform/komodo/wiki/Complete-Checklist-for-New-Coins-to-Setup-Explorers,-Electrum-Servers,-Agama-Wallet,-Activate-dPoW-&-BarterDEX-Trading)  
 
+### CC
+- [dice](https://github.com/KomodoPlatform/komodo/wiki/Detailed-Guide-to-Start-KMDICE-Chain-and-Play-Dice-Using-CLI)  
+- [rogue](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game)  
+
 ### Notary Node Setup
 
 [Setup Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Setup-Komodo-Notary-Node)  
