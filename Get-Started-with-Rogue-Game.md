@@ -1,3 +1,4 @@
+**This is under heavy development and this guide is specifically for testing. If you find any info is missing or not accurate, please let us know at `cc-rogue` channel in [Komodo Discord](https://komodoplatform.com/discord).**
 ## Compile `rogue` and Komodo
 ```shell
 sudo apt-get update && sudo apt-get upgrade -y
