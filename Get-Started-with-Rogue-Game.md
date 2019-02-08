@@ -46,26 +46,18 @@ This will display the following info from where you get the pubkey.
   "account": ""
 }
 ```
-
 ### Step 4
-Stop the ROGUE chain with the following command. (Make sure to use this command every time you want to stop the chain. Otherwise, you risk corrupting database and have to rescan the blockchain again.)
+Set the pubkey we got from Step 3. This step is mandatory and without pubkey set, CC is not usable.
 ```shell
-./komodo-cli -ac_name=ROGUE stop
+./komodo-cli -ac_name=ROGUE setpubkey 02f183a71e93dfa7672ce7212187e45eabcf4077fed575348504b20295751ab1a2
 ```
-
-## Start ROGUE with `pubkey` to Play Rogue Game
-Use the following command to start ROGUE with `pubkey` for address you are going to use. If you don't have a pubkey, please follow the steps above.
-```shell
-./komodod -ac_name=ROGUE -ac_supply=1000000 -pubkey=02f183a71e93dfa7672ce7212187e45eabcf4077fed575348504b20295751ab1a2 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc > /dev/null &
-```
-
 ## How to start playing?
-#### Step 1
+### Step 1
 Open a new terminal and navigate to `~/komodo/src` directory
 ```
 cd ~/komodo/src
 ```
-#### Step 2
+### Step 2
 Register a new game with single player and 0 buyin. If you don't have funds, this is where you start. `17` is the method that you always have to use. Don't change this value. Otherwise, it will not work.
 ```
 ./komodo-cli -ac_name=ROGUE cclib newgame 17 "[1]"
@@ -95,7 +87,7 @@ Output:
 ```
 ./komodo-cli -ac_name=ROGUE cclib newgame 17 \"[3,10]\"
 ```
-#### Step 3
+### Step 3
 Check the `gameinfo` with the txid
 Usage:
 ```
@@ -126,7 +118,7 @@ Output:
 }
 ```
 The above example shows `run` field which shows the exact command to run in terminal to register the gameplay.
-#### Step 4
+### Step 4
 Register the game play txid
 ```
 ./komodo-cli -ac_name=ROGUE cclib register 17 \"[%2209d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70%22]\"
@@ -152,7 +144,7 @@ Output:
 ```
 0896bf6cdabb31d90aa470ba8b85b01193bbca07b44618f8cadc0ed12d4ea749c
 ```
-#### Step 5
+### Step 5
 Check the `gameinfo` again after registering to get the game start command with seed.
 ```
 ./komodo-cli -ac_name=ROGUE cclib gameinfo 17 \"[%2209d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70%22]\"
@@ -187,7 +179,7 @@ Output:
 }
 ```
 Along with the run command, now this shows player data as well.
-#### Step 6
+### Step 6
 Start your game using the game start command from the `run` field above
 ```
 cc/rogue/rogue 3767108440867690538 09d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70
