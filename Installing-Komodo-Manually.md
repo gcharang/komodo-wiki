@@ -8,7 +8,7 @@ Currently, you will need:
 
 - Linux (easiest with a Debian-based distribution)
 - 64-bit
-- 4GB of free memory
+- 4GB of free memory (Minimum 8GB RAM recommended)
 
 
 ### Get Started
@@ -21,7 +21,7 @@ sudo apt-get upgrade (and say Y when it wants to upgrade stuff)
 
 #### Install the dependency packages:
 ```shell
-sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang
+sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev
 ```
 
 ### Install `nanomsg`
