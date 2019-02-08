@@ -11,8 +11,8 @@ cd ../../
 ./zcutil/build.sh -j$(nproc)
 ```
 
-## Get `pubkey` value
-We need to get `pubkey` value for the smartaddress you are going to use the ROGUE wallet with. `pubkey` is needed for CC use. If you already know the pubkey of the address you are going to use, please skip to the [next section](https://github.com/KomodoPlatform/komodo/wiki/Detailed-Guide-to-Start-ROGUE-Chain-and-Play-Dice-Using-CLI#start-ROGUE-with-pubkey-to-play-dice-game).
+## Set `pubkey` value
+We need to get `pubkey` value for the smartaddress you are going to use the ROGUE wallet with. `pubkey` is needed for CC use.
 
 ### Step 1
 Start the ROGUE chain with the following command and wait for the daemon to fully sync.
