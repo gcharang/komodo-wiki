@@ -4,7 +4,9 @@
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate software-properties-common curl libcurl4-gnutls-dev cmake clang -y
 git clone https://github.com/jl777/komodo
-cd komodo/src/cc
+cd komodo
+git checkout jl777
+cd src/cc
 ./makerogue
 cd ../../
 ./zcutil/fetch-params.sh
