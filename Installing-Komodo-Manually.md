@@ -16,7 +16,7 @@ Log in as the user to your system, and issue these commands to make sure your Li
 
 ```shell
 sudo apt-get update
-sudo apt-get upgrade (and say Y when it wants to upgrade stuff)
+sudo apt-get upgrade -y
 ```
 
 #### Install the dependency packages:
