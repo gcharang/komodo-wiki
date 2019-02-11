@@ -54,6 +54,15 @@ Set the pubkey we got from Step 3. This step is mandatory and without pubkey set
 ```shell
 ./komodo-cli -ac_name=ROGUE setpubkey 02f183a71e93dfa7672ce7212187e45eabcf4077fed575348504b20295751ab1a2
 ```
+Output:
+```
+{
+  "address": "RPCeZmqW4Aam52DFLmMraWtu5CuXPxqk92",
+  "ismine": true,
+  "pubkey": "02f183a71e93dfa7672ce7212187e45eabcf4077fed575348504b20295751ab1a2"
+}
+```
+Your pubkey is now set and you can proceed to next step.
 ## How to start playing?
 ### Step 1
 Open a new terminal and navigate to `~/komodo/src` directory
