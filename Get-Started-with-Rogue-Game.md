@@ -13,6 +13,17 @@ cd ../../
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 ```
+## Update `komodod`
+Always make sure to issue `./makerogue` before compiling latest `komodod` for playing ROGUE.
+```
+cd ~/komodo
+git checkout jl777
+git pull
+cd src/cc
+./makerogue
+cd ../../
+./zcutil/build.sh -j$(nproc)
+```
 
 ## Set `pubkey` value
 We need to get `pubkey` value for the smartaddress you are going to use the ROGUE wallet with. `pubkey` is needed for CC use.
