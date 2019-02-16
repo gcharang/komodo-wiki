@@ -31,6 +31,7 @@ We need to get `pubkey` value for the smartaddress you are going to use the ROGU
 ### Step 1
 Start the ROGUE chain with the following command and wait for the daemon to fully sync.
 ```shell
+cd ~/komodo/src
 ./komodod -ac_name=ROGUE -ac_supply=1000000 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc -daemon
 ```
 
