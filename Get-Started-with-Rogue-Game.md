@@ -76,8 +76,8 @@ Output:
 ```
 Your pubkey is now set and you can proceed to next step.
 ## How to start playing?
-##### TUI
-##### Manual
+- [TUI](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#tui-1)  
+- [Manual](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#manual-play)  
 ### TUI
 Use a new terminal window to follow these steps. Make sure the the ROGUE dameon is running on the other terminal.
 Install dependencies:
