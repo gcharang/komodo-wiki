@@ -82,7 +82,7 @@ Your pubkey is now set and you can proceed to next step.
 Use a new terminal window to follow these steps. Make sure the the ROGUE dameon is running on the other terminal.
 Install dependencies:
 ```shell
-sudo apt-get install python3.6
+sudo apt-get install python3.6 python3-pip libgnutls28-dev
 ```
 Install Required Python Packages
 ```shell
