@@ -16,12 +16,12 @@ Log in as the user to your system, and issue these commands to make sure your Li
 
 ```shell
 sudo apt-get update
-sudo apt-get upgrade (and say Y when it wants to upgrade stuff)
+sudo apt-get upgrade -y
 ```
 
 #### Install the dependency packages:
 ```shell
-sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev
+sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev -y
 ```
 
 ### Install `nanomsg`
@@ -259,7 +259,7 @@ PLEASE FOLLOW THE VIDEO TUTORIAL: https://youtu.be/gfZZy8b222E
 
 
 
-1. First download komodo windows [binaries](https://artifacts.supernet.org/latest/komodo/windows/) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
+1. First download komodo windows [binaries](https://github.com/KomodoPlatform/komodo/releases) and place the files in a new folder on the Desktop called kmd ('C:\Users\YourUserName\Desktop\kmd') .
 
 
 Open a Command Prompt for the following steps.
@@ -267,7 +267,7 @@ Open a Command Prompt for the following steps.
 
 2. Next we'll create the Komodo directory in the AppData directory.
 
-`mkdir "%HOMEPATH%\AppData\Roaming\komodo"`
+`mkdir "%HOMEPATH%\AppData\Roaming\Komodo"`
 
 
 3. Next we will create our komodo.conf file.

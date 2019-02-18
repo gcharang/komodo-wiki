@@ -21,6 +21,7 @@ Welcome to the komodo wiki! This is where you find more information about Komodo
 [Setup Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Setup-Komodo-Notary-Node)  
 [Security Setup for Komodo Notary Node](https://github.com/KomodoPlatform/komodo/wiki/Standard-Security-Setup-for-Nodes)  
 [Assetchains Guide for Komodo notary Nodes](https://github.com/KomodoPlatform/komodo/wiki/Assetchains-Guide-for-Notary-Nodes)  
+[Generate Address and Private Key (WIF) for 3rd Party Coins Using Passphrase](https://github.com/KomodoPlatform/komodo/wiki/How-to-Generate-Address-and-Private-Key-(WIF)-for-3rd-Party-Coins-Using-Passphrase)  
 
 ### Notary Node Maintenance
 [Notary Node Statistics](https://komodostats.com)  
