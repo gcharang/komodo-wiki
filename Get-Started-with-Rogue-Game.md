@@ -46,7 +46,7 @@ cd ~/komodo/src
 ./komodod -ac_name=ROGUE -ac_supply=1000000 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc -daemon
 ```
 ### Step 2
-Opean a new terminal window and  issue the following command to generate a new address and you can use the rest of the commands in this terminal including gameplay.
+Open a new terminal window and  issue the following command to generate a new address and you can use the rest of the commands in this terminal including gameplay.
 ```shell
 ./komodo-cli -ac_name=ROGUE getnewaddress
 ```
