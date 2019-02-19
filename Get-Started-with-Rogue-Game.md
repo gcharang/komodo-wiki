@@ -7,12 +7,17 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev -y
 ```
 #### macOS (OSX)
+Ensure commandline tools from apple/xcode are installed.
+```
+xcode-select --install
+```
 `brew` is needed to install dependencies. If you have latest `brew` installed in your system already, skip this and install the deps directly.
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 These are the dependencies needed to install with `brew`.
 ```
+brew update
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
 brew install gcc@6
