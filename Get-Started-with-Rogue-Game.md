@@ -1,5 +1,6 @@
 **This is under heavy development and this guide is specifically for testing. If you find any info is missing or not accurate, please let us know at `#cc-rogue` channel in [Komodo Discord](https://komodoplatform.com/discord).**
 ## Install Dependencies
+These are must and you need to make sure all dependencies installed correctly.
 ```shell
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev -y
