@@ -23,7 +23,7 @@ brew install wget
 ```
 Once you have installed all dependencies correctly, it is time to clone and compile. Follow the next steps to compile Komodo in both Linux and macOS (OSX).
 ## Clone & Compile Komodo
-Instead of `./zcutil/build.sh -j$(nproc)` you can use `./zcutil/build.sh -j8` in macOS or Linux (change `8` from `-j8` to any number of CPU threads you want to use for compiling).
+For macOS (OSX) use `./zcutil/build-mac.sh -j8` to compile(change `8` from `-j8` to any number of CPU threads you want to use for compiling).
 ```shell
 cd ~
 git clone https://github.com/jl777/komodo
