@@ -18,6 +18,7 @@ xcode-select --install
 These are the dependencies needed to install with `brew`.
 ```
 brew update
+brew upgrade
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
 brew install gcc@6
