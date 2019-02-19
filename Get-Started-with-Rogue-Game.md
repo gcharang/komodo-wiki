@@ -1,5 +1,5 @@
-**This is under heavy development and this guide is specifically for testing. If you find any info is missing or not accurate, please let us know at `cc-rogue` channel in [Komodo Discord](https://komodoplatform.com/discord).**
-## Compile `rogue` and Komodo
+**This is under heavy development and this guide is specifically for testing. If you find any info is missing or not accurate, please let us know at `#cc-rogue` channel in [Komodo Discord](https://komodoplatform.com/discord).**
+## Compile Komodo
 ```shell
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev -y
@@ -7,42 +7,33 @@ cd ~
 git clone https://github.com/jl777/komodo
 cd komodo
 git checkout jl777
-cd src/cc
-./makerogue
-cd ../../
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 ```
 ## Update `komodod`
-Always make sure to issue `./makerogue` before compiling latest `komodod` for playing ROGUE.
 ```shell
 cd ~/komodo
 git checkout jl777
 git pull
-cd src/cc
-./makerogue
-cd ../../
 ./zcutil/build.sh -j$(nproc)
 ```
 
 ## Set `pubkey` value
 We need to get `pubkey` value for the smartaddress you are going to use the ROGUE wallet with. `pubkey` is needed for CC use.
 
-### Step 1
-Start the ROGUE chain with the following command and wait for the daemon to fully sync.
+### Step 1 - Start the chain
+Start the ROGUE chain with the following command in a terminal window and wait for the daemon to fully sync. **Don't close this terminal window and keep it running.**
 ```shell
 cd ~/komodo/src
 ./komodod -ac_name=ROGUE -ac_supply=1000000 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc -daemon
 ```
-
 ### Step 2
-Get a new address
+Opean a new terminal window and  issue the following command to generate a new address and you can use the rest of the commands in this terminal including gameplay.
 ```shell
 ./komodo-cli -ac_name=ROGUE getnewaddress
 ```
-
 ### Step 3
-use `validateaddress` command with the address you got to get the pubkey displayed
+Use `validateaddress` command with the address you got to get the pubkey displayed
 ```shell
 ./komodo-cli -ac_name=ROGUE validateaddress RPCeZmqW4Aam52DFLmMraWtu5CuXPxqk92
 ```
