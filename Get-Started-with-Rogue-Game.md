@@ -102,6 +102,7 @@ cd ~/komodo/src
 ./komodod -ac_name=ROGUE -pubkey=02f183a71e93dfa7672ce7212187e45eabcf4077fed575348504b20295751ab1a2 -ac_supply=1000000 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc -daemon
 ```
 **Always keep the terminal open where you are running the daemon and start a new terminal window to start playing.**
+***
 ## How to start playing?
 There are currently 2 ways of playing Komodo Rogue game. Please make sure that you have followed the above instructions correctly to start the daemon and set pubkey.
 - [TUI](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#tui)  
@@ -127,11 +128,13 @@ cp -r * ~/komodo/src
 ##### macOS (OSX)
 - Download portable latest zip for OSX from [here](https://github.com/tonymorony/komodo_cryptoconditions_tui/releases)
 - Extract all contents into `~/komodo/src` directory and follow the next step
+***
 #### Launch the TUI to start playing
 ```shell
 cd  ~/komodo/src
 ./rogue_tui.py 
 ```
+***
 ### Manual Play
 #### Step 1
 Open a new terminal and navigate to `~/komodo/src` directory
