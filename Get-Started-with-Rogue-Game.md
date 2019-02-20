@@ -104,6 +104,7 @@ There are currently 2 ways of playing Komodo Rogue game. Please make sure that y
 - [TUI](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#tui)  
 - [Manual](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#manual-play)  
 ### TUI
+##### Linux
 Use a new terminal window to follow these steps. Make sure the the ROGUE dameon is running on the other terminal.
 Install dependencies:
 ```shell
@@ -120,7 +121,10 @@ cd komodo_cryptoconditions_tui
 git checkout rogue
 cp -r * ~/komodo/src
 ```
-Launch the TUI to start playing
+##### macOS (OSX)
+- Download portable latest zip for OSX from [here](https://github.com/tonymorony/komodo_cryptoconditions_tui/releases)
+- Extract all contents into `~/komodo/src` directory and follow the next step
+#### Launch the TUI to start playing
 ```shell
 cd  ~/komodo/src
 ./rogue_tui.py 
