@@ -48,7 +48,7 @@ git checkout jl777
 git pull
 ./zcutil/build.sh -j$(nproc)
 ```
-
+***
 ## Set `pubkey` value
 We need to get `pubkey` value for the smartaddress you are going to use the ROGUE wallet with. `pubkey` is needed for CC use.
 
