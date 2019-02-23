@@ -263,10 +263,15 @@ Output:
 }
 ```
 Along with the run command, now this shows player data as well.
-#### Step 6
+#### Step 6 - Play
 Start your game using the game start command from the `run` field above
 ```shell
 cc/rogue/rogue 3767108440867690538 09d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70
+```
+#### Step 7 - Bailout
+Once you have enough Gold and if you want to convert them into ROGUE coin, quit from the game by entering **Q** and issue a bailout like below. If your player die in-game, this will not work.
+```shell
+./komodo-cli -ac_name=ROGUE cclib bailout 17 \"[%2209d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70%22]\"
 ```
 
 #### Useful read:
