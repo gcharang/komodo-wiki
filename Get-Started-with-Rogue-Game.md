@@ -1,48 +1,70 @@
-**This is under heavy development and this guide is specifically for testing. If you find any info is missing or not accurate, please let us know at `cc-rogue` channel in [Komodo Discord](https://komodoplatform.com/discord).**
-## Compile `rogue` and Komodo
+**This is under heavy development and this guide is specifically for testing. If you find any info is missing or not accurate, please let us know at `#cc-rogue` channel in [Komodo Discord](https://komodoplatform.com/discord).**
+## Install Dependencies
+These are must and you need to make sure all dependencies installed correctly for Linux or macOS.
+#### Linux
 ```shell
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev -y
+```
+#### macOS (OSX)
+Ensure commandline tools from apple/xcode are installed. Issue the following command in a terminal.
+```
+xcode-select --install
+```
+`brew` is needed to install dependencies. If you have latest `brew` installed in your system already, skip this and install the deps directly.
+```shell
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+These are the dependencies needed to install with `brew`.
+```
+brew update
+brew upgrade
+brew tap discoteq/discoteq; brew install flock
+brew install autoconf autogen automake
+brew install gcc@6
+brew install binutils
+brew install protobuf
+brew install coreutils
+brew install wget
+```
+Once you have installed all dependencies correctly, it is time to clone and compile. Follow the next steps to compile Komodo in both Linux and macOS (OSX).
+
+***
+
+## Clone & Compile Komodo
+For macOS (OSX) use `./zcutil/build-mac.sh -j8` to compile(change `8` from `-j8` to any number of CPU threads you want to use for compiling).
+```shell
 cd ~
 git clone https://github.com/jl777/komodo
 cd komodo
 git checkout jl777
-cd src/cc
-./makerogue
-cd ../../
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 ```
 ## Update `komodod`
-Always make sure to issue `./makerogue` before compiling latest `komodod` for playing ROGUE.
 ```shell
 cd ~/komodo
 git checkout jl777
 git pull
-cd src/cc
-./makerogue
-cd ../../
 ./zcutil/build.sh -j$(nproc)
 ```
-
+***
 ## Set `pubkey` value
 We need to get `pubkey` value for the smartaddress you are going to use the ROGUE wallet with. `pubkey` is needed for CC use.
 
-### Step 1
-Start the ROGUE chain with the following command and wait for the daemon to fully sync.
+### Step 1 - Start the chain
+Start the ROGUE chain with the following command in a terminal window and wait for the daemon to fully sync. **Don't close this terminal window and keep it running.**
 ```shell
 cd ~/komodo/src
 ./komodod -ac_name=ROGUE -ac_supply=1000000 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc -daemon
 ```
-
 ### Step 2
-Get a new address
+Open a new terminal window and  issue the following command to generate a new address and you can use the rest of the commands in this terminal including gameplay.
 ```shell
 ./komodo-cli -ac_name=ROGUE getnewaddress
 ```
-
 ### Step 3
-use `validateaddress` command with the address you got to get the pubkey displayed
+Use `validateaddress` command with the address you got to get the pubkey displayed
 ```shell
 ./komodo-cli -ac_name=ROGUE validateaddress RPCeZmqW4Aam52DFLmMraWtu5CuXPxqk92
 ```
@@ -80,11 +102,13 @@ cd ~/komodo/src
 ./komodod -ac_name=ROGUE -pubkey=02f183a71e93dfa7672ce7212187e45eabcf4077fed575348504b20295751ab1a2 -ac_supply=1000000 -addnode=5.9.102.210  -ac_cclib=rogue -ac_perc=10000000 -ac_reward=100000000 -ac_cc=60001 -ac_script=2ea22c80203d1579313abe7d8ea85f48c65ea66fc512c878c0d0e6f6d54036669de940febf8103120c008203000401cc -daemon
 ```
 **Always keep the terminal open where you are running the daemon and start a new terminal window to start playing.**
+***
 ## How to start playing?
 There are currently 2 ways of playing Komodo Rogue game. Please make sure that you have followed the above instructions correctly to start the daemon and set pubkey.
 - [TUI](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#tui)  
 - [Manual](https://github.com/KomodoPlatform/komodo/wiki/Get-Started-with-Rogue-Game#manual-play)  
 ### TUI
+##### Linux
 Use a new terminal window to follow these steps. Make sure the the ROGUE dameon is running on the other terminal.
 Install dependencies:
 ```shell
@@ -101,11 +125,16 @@ cd komodo_cryptoconditions_tui
 git checkout rogue
 cp -r * ~/komodo/src
 ```
-Launch the TUI to start playing
+##### macOS (OSX)
+- Download portable latest zip for OSX from [here](https://github.com/tonymorony/komodo_cryptoconditions_tui/releases)
+- Extract all contents into `~/komodo/src` directory and follow the next step
+***
+#### Launch the TUI to start playing
 ```shell
 cd  ~/komodo/src
 ./rogue_tui.py 
 ```
+***
 ### Manual Play
 #### Step 1
 Open a new terminal and navigate to `~/komodo/src` directory
@@ -234,10 +263,15 @@ Output:
 }
 ```
 Along with the run command, now this shows player data as well.
-#### Step 6
+#### Step 6 - Play
 Start your game using the game start command from the `run` field above
 ```shell
 cc/rogue/rogue 3767108440867690538 09d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70
+```
+#### Step 7 - Bailout
+Once you have enough Gold and if you want to convert them into ROGUE coin, quit from the game by entering **Q** and issue a bailout like below. If your player die in-game, this will not work.
+```shell
+./komodo-cli -ac_name=ROGUE cclib bailout 17 \"[%2209d702b9bf678ee9d4efc29354566b4453e2e4ebdf7bac3496e667e8d435fe70%22]\"
 ```
 
 #### Useful read:
