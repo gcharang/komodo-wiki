@@ -180,13 +180,18 @@ tar -czvf ~/wallet_backup_21May2017.dat.tgz ~/wallet_backup_21May2017.dat
 # Installing Komodo on OSX
 
 ### Requirements
-Packages are installed through homebrew, make sure to install it: 
+Ensure commandline tools from apple/xcode are installed. Issue the following command in a terminal.
+```
+xcode-select --install
+```
+`brew` is needed to install dependencies. If you have latest `brew` installed in your system already, skip this and install the deps directly.
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-
-Now install the dependency packages:
-```shell
+These are the dependencies needed to install with `brew`.
+```
+brew update
+brew upgrade
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake
 brew install gcc@6
@@ -194,29 +199,25 @@ brew install binutils
 brew install protobuf
 brew install coreutils
 brew install wget
-brew install nanomsg
 ```
-or
-
-`brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc6 binutils protobuf coreutils wget nanomsg`
 
 #### Clone the Komodo repository
 ```shell
 git clone https://github.com/KomodoPlatform/komodo
 ```
 
-#### Get the proving keys:
+#### Get the Zcash params:
 ```shell
 cd komodo
 ./zcutil/fetch-params.sh
 ```
 
-#### And now build Komodo
+#### Compile Komodo
 ```shell
 git checkout dev
 ./zcutil/build-mac.sh
 ```
-This can take some time, so let's create a configuration file in the mean time. 
+This can take some time, so let's create a configuration file in the mean time using a new terminal. 
 
 ### Create configuration file
 The configuration file should be created in the following directory:
