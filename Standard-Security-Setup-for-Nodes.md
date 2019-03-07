@@ -28,9 +28,9 @@ When installing a minimal setup of Ubuntu, be sure you select the OpenSSH server
 
 > sudo vi /etc/ssh/sshd_config
 
-- Find the following: _PermitRootLogin_ and set this to YES. So it will look like this:
+- Find the following: _PermitRootLogin_ and set this to `no`. (Make sure you have a non-root user with sudo privileges created already before doing this step and you can login using that user account. Otherwise, you will be locked out of your server.) So it will look like this:
 
-> PermitRootLogin yes
+> PermitRootLogin no
 
 - Now find the following: _PasswordAuthentication_ and set this to NO. So it will look like this:
 
