@@ -124,6 +124,7 @@ git clone https://github.com/tonymorony/komodo_cryptoconditions_tui
 cd komodo_cryptoconditions_tui
 git checkout rogue
 cp -r * ~/komodo/src
+cp ~/.komodo/ROGUE/ROGUE.conf ~/komodo/src/ROGUE.conf
 ```
 ##### macOS (OSX)
 - Download portable latest zip for OSX from [here](https://github.com/tonymorony/komodo_cryptoconditions_tui/releases)
@@ -131,7 +132,8 @@ cp -r * ~/komodo/src
 ***
 #### Launch the TUI to start playing
 ```shell
-cd  ~/komodo/src
+cd ~/komodo/src
+cp ~/Library/Application\ Support/Komodo/ROGUE/ROGUE.conf ~/komodo/src/ROGUE.conf
 ./rogue_tui.py 
 ```
 ***
