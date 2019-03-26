@@ -17,8 +17,7 @@ Komodo currently only works on Linux. To setup Komodo Notary Node be sure you ha
 
 ## Operating System
 
-Ubuntu x64 - *14.04* or *16.04* minimal installation with Openssh server.
-_This tutorial has been successfully tested with 14.04 and 16.04._
+Ubuntu LTS x64 - minimal installation with Openssh server.
 
 ## Security
 
