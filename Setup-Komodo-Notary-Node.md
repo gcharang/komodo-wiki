@@ -58,7 +58,7 @@ sudo apt-get install build-essential pkg-config libc6-dev m4 \
 		zlib1g-dev wget bsdmainutils automake libboost-all-dev \
 		libssl-dev libprotobuf-dev protobuf-compiler \
 		libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common \
-		curl libevent-dev libcurl4-gnutls-dev cmake clang
+		curl libevent-dev libcurl4-gnutls-dev libsodium-dev cmake clang
 ```
 
 ## Install `nanomsg`
