@@ -196,4 +196,8 @@ Output:
 ```
 23c2aaaf458ada3f171ee5d274e8dcfc91b62099ec15e4b2d02da2b2d1172cb1
 ```
-Where `23c2aaaf458ada3f171ee5d274e8dcfc91b62099ec15e4b2d02da2b2d1172cb1` is output txid which you can use in explorer or other places to verify the transaction
+Where `23c2aaaf458ada3f171ee5d274e8dcfc91b62099ec15e4b2d02da2b2d1172cb1` is output txid which you can use in explorer or other places to verify the transaction.
+
+Related Materials:
+- [Russian detailed article](https://medium.com/@decker.komodo/%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B5%D0%B9-multisig-%D0%B2-komodo-9d8f8c48da52)
+- [Multisig Web Tool](https://deckersu.github.io/coinbin/#newMultiSig)
