@@ -8,7 +8,7 @@ First lets create addresses on two nodes which we will combine the into single m
 
 ### Node 1:
 
-##### Generate new address:
+#### Generate new address:
 Command:
 ```
 ./komodo-cli getnewaddress
@@ -17,7 +17,7 @@ Output:
 ```
 RDomQ4tftJGjcHBVpAUx549jZfxtJx74r5
 ```
-##### Get pubkey value using `validateaddress`:
+#### Get pubkey value using `validateaddress`:
 Command:
 ```shell
 ./komodo-cli validateaddress RDomQ4tftJGjcHBVpAUx549jZfxtJx74r5
@@ -37,7 +37,7 @@ Output:
   "account": ""
 }
 ```
-##### Get private key (WIF):
+#### Get private key (WIF):
 Command:
 ```shell
 ./komodo-cli dumpprivkey RDomQ4tftJGjcHBVpAUx549jZfxtJx74r5
@@ -46,7 +46,7 @@ Output:
 ```
 UrunDGyFJu5UFZG7BnFx9R6iaPmWaBX8iqHzRpFRjNp8kBEQYKNt
 ```
-##### To summarise data from Node 1:
+#### To summarise data from Node 1:
 ```
 address: RDomQ4tftJGjcHBVpAUx549jZfxtJx74r5
 pubkey:  02dd22c272504af79b220ba37c12f777596eff4f54598e2db65be325a9393a3a26
@@ -55,7 +55,7 @@ privkey: UrunDGyFJu5UFZG7BnFx9R6iaPmWaBX8iqHzRpFRjNp8kBEQYKNt
 ### Node 2:
 On a different node, follow the same steps to generate new address, validate and export private key.
 Command:
-##### Generate new address:
+#### Generate new address:
 Command:
 ```shell
 ./komodo-cli getnewaddress
@@ -64,7 +64,7 @@ Output:
 ```
 RBqZ6nHcANekX3zxF9y4zRyfB6X8VEWF7s
 ```
-##### Get pubkey value using `validateaddress`:
+#### Get pubkey value using `validateaddress`:
 Command:
 ```shell
 ./komodo-cli validateaddress RBqZ6nHcANekX3zxF9y4zRyfB6X8VEWF7s
@@ -84,7 +84,7 @@ Output:
   "account": ""
 }
 ```
-##### Get private key (WIF):
+#### Get private key (WIF):
 Command:
 ```shell
 ./komodo-cli dumpprivkey RBqZ6nHcANekX3zxF9y4zRyfB6X8VEWF7s
@@ -93,7 +93,7 @@ Output:
 ```
 UsuE7jG8BD1CV2xuCoBCwgzzbs4HqZ2P2im5fdyJmP2tSd3arAv7
 ```
-##### To summarise data from Node 2:
+#### To summarise data from Node 2:
 ```
 address: RBqZ6nHcANekX3zxF9y4zRyfB6X8VEWF7s
 pubkey:  032a73cd31fb86150c33f26312b665c21e5f9391829f29cf48aca03bbb4f9a2816
@@ -147,7 +147,7 @@ Output:
 
 You need to sign the raw transaction using both nodes to be able to broadcast & spend. 
 
-#### Node 1:
+### Node 1:
 Command:
 ```shell
 ./komodo-cli signrawtransaction "0400008085202f89011ce899dd6d796f06eaae4c771e119a9fb71372c5d861d225ae74548c38ea4f190100000000ffffffff014014502e000000001976a91497d5106d5f69619803eb8d72a2bf45a4f033338a88ac00000000a80000000000000000000000000000" '[{"txid":"194fea388c5474ae25d261d8c57213b79f9a111e774caeea066f796ddd99e81c","vout":1,"scriptPubKey":"a914121cbc7a828772bd4612bc7b9765cbbf13d0b3cc87","redeemScript":"522102dd22c272504af79b220ba37c12f777596eff4f54598e2db65be325a9393a3a2621032a73cd31fb86150c33f26312b665c21e5f9391829f29cf48aca03bbb4f9a281652ae","amount":7.77}]' '["UrunDGyFJu5UFZG7BnFx9R6iaPmWaBX8iqHzRpFRjNp8kBEQYKNt"]'
@@ -169,7 +169,7 @@ Output:
 }
 ```
 
-#### Node 2
+### Node 2
 (change hex to hex which you get from Node 1 signing and change privkey to Node 2 privkey)
 Comamnd:
 ```shell
