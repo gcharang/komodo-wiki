@@ -4,7 +4,7 @@ In this short guide we will demonstrate 2of2 multisignature wallet creation and 
 
 There are various tools you can use for multisig including Agama. Check the related materials section at the end of this guide for links.
 
-## Step 1
+## Step 1 - Get a new address, pubkey and privkey
 
 First lets create addresses on two nodes which we will combine the into single mutlisig address. Also we will need pubkey and privkey (WIF) for each address:
 
