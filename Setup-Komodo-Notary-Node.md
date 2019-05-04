@@ -56,6 +56,8 @@ git checkout beta
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 ```
+`-j$(nproc)` uses all available processor threads while compiling. If you don't want to use all threads, you can use `-j8` which will use only 8 threads.
+
 #### Symlink the compiled binaries
 ```shell
 sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
