@@ -603,7 +603,7 @@ curl --url "http://127.0.0.1:7776" --data "{\"method\":\"walletpassphrase\",\"pa
 ```
 #### Make `wp_7776` file executable
 ```shell
-chmod +x wp_7776`
+chmod +x wp_7776
 ```
 #### Create `userhome.txt`
 Create `userhome.txt` file inside `iguana` dir with your server user name. Here is an example using user `dextar` and how the file should look like.
