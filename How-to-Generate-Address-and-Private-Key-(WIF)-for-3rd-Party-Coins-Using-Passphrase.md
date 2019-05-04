@@ -1,4 +1,4 @@
-#### This guide is intended for Notary Node operators. Other users may find it useful too.
+#### This guide is intended for Notary Node operators. Other users may find it useful too. Never use your Notary Node passphrase into any other computer/server other than your node itself for security purposes.
 -----------------------------
 
 ### Install deps
@@ -15,7 +15,7 @@ cd komodo_scripts
 git submodule init
 git submodule update --init --recursive
 ```
-2. edit `genkomodo.php` and fill your passphrase instead of $passphrase = "myverysecretandstrongpassphrase_noneabletobrute". Change only the content inside `""` e.g.: change `myverysecretandstrongpassphrase_noneabletobrute` with your passphrase
+2. edit `genkomodo.php` and fill your passphrase instead of `$passphrase = "myverysecretandstrongpassphrase_noneabletobrute"`. Change only the content inside `""` e.g.: change `myverysecretandstrongpassphrase_noneabletobrute` with your passphrase
 3. Run in terminal `php genkomodo.php`
 4. Copy and use your required WIF and delete your passphrase from `genkomodo.php` for security purposes.
 
