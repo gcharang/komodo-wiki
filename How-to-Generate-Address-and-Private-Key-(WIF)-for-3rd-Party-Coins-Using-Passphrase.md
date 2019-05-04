@@ -1,4 +1,4 @@
-#### This guide is intended for Notary Node operators. Other users may find it useful too. Please remember, this only works for BTC, KMD, GAME, EMC2, HUSH coin currently.
+#### This guide is intended for Notary Node operators. Other users may find it useful too.
 -----------------------------
 
 ### Install deps
