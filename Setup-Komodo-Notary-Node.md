@@ -25,7 +25,7 @@ Ubuntu LTS x64 - minimal installation with Openssh server.
 
 - Update the Operating System: `sudo apt-get -y update && sudo apt-get -y upgrade`
 - Install [Fail2ban](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04). 
-- Create an unprivileged user and [install a SSH key](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04)
+- [Perform Initial Setup for creating new user, give sudo permission, change SSH port, disable `root` login, disable password authentication for login](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04)
 - Please run processes as an unprivileged user and use sudo where necessary
 
 
