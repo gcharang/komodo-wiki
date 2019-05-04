@@ -1,8 +1,7 @@
 #### This guide is intended for Notary Node operators. Other users may find it useful too. Please remember, this only works for BTC, KMD, GAME, EMC2, HUSH coin currently.
 -----------------------------
 
-### Requirements
-Install deps
+### Install deps
 ```
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install git php7.2-cli php7.2-gmp php7.2-mbstring
