@@ -413,7 +413,7 @@ sudo ln -sf /home/$USER/gincoin-core/src/gincoind /usr/local/bin/gincoind
 chmod +x build.sh
 ./build.sh
 ```
-#### Step 4: Create GIN data dir, `einsteinium.conf` file and secure it
+#### Step 4: Create GIN data dir, `gincoin.conf` file and secure it
 ```shell
 cd ~
 mkdir .gincoincore
