@@ -78,7 +78,10 @@ server=1
 daemon=1
 rpcworkqueue=256
 ```
-
+Secure the `komodo.conf` file
+```
+chmod 600 ~/.komodo/komodo.conf
+```
 ## Compile Bitcoin and other 3rd-party Coin from Source
 ### Bitcoin
 #### Step 1: Clone Bitcoin source
