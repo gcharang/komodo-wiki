@@ -700,22 +700,3 @@ After you see `INIT with 64 notaries`, you can safely start dPoW process. Just i
 ```
 Iguana should split your utxos automatically. If you want to test or split manually, you can follow [this guide](https://github.com/KomodoPlatform/komodo/wiki/How-to-Split-UTXO-for-Notarization).
 
-# N00b Q&A
-
-- I receive "null utxo array size" as output when i start script start2
-	You have to fund your BTC wallet with 0.01btc. Send your BTC address to James and he will fund it.
-	
-- If I did not initially run bitcoind or komodod with txindex=1, then should I add that to .conf and rescan blockchain or something?
-	Yes, you need to launch it with -reindex in the command line arg (like bitcoind -reindex &)
-
-- When i start Iguana, i see a message that my IP is dead. Is it?
-        It isn't ;-) just start de start2 script and it's alive.
-
-- When i log out of my server and log back in again after i while, the Iguana proces has been killed, why?
-        I do not know why, i had this problem myself. Contact BadAss for a solution for this.
-
-- I get all kinds of strange warnings in the output of start2. Did i broke something?
-        Rule nr.1, if you do not see any ERROR's, let it run. James is busy with debugging the code. Do you see warnings, then let it run. If you don't trust it, restart it again.
-
-- My Iguana process gets killed by a buffer overflow error. Do i have to start over again?
-        No, just go to ~/SuperNET and do a git pull. 
