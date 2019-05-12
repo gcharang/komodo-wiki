@@ -1,6 +1,7 @@
 #### This guide is intended for Notary Node operators. Other users may find it useful too. Never use your Notary Node passphrase into any other computer/server other than your node itself for security purposes.
 
 **Note: For Notary Nodes, we will need `Compressed Public Key` as BTC pubkey, `Compressed WIF` as private key and `Compressed Address` as the public address.**
+
 -----------------------------
 
 ### Install deps
