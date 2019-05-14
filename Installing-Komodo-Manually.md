@@ -21,24 +21,8 @@ sudo apt-get upgrade -y
 
 #### Install the dependency packages:
 ```shell
-sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang libsodium-dev -y
+sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool libncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libqrencode-dev libdb++-dev ntp ntpdate nano software-properties-common curl libevent-dev libcurl4-gnutls-dev cmake clang libsodium-dev -y
 ```
-
-### Install `nanomsg`
-
-#### Linux
-```shell
-cd ~
-git clone https://github.com/nanomsg/nanomsg
-cd nanomsg
-cmake . -DNN_TESTS=OFF -DNN_ENABLE_DOC=OFF
-make -j2
-sudo make install
-sudo ldconfig
-```
-
-This takes some time depending your internet connection. Let it run in the background.
-Now it is time to install Komodo. Follow each line step by step and ignore the "libgmp headers missing" at some point!
 
 ### Installing Komodo
 
@@ -215,7 +199,7 @@ cd komodo
 #### Compile Komodo
 ```shell
 git checkout dev
-./zcutil/build-mac.sh
+./zcutil/build-mac.sh -j8
 ```
 This can take some time, so let's create a configuration file in the mean time using a new terminal. 
 
